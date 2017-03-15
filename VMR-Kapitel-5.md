@@ -1,3 +1,10 @@
+---
+header-includes:
+- \usepackage[all]{xy}
+- \usepackage{tikz}
+- \usetikzlibrary{calc,matrix}
+---
+
 # 5. Lineare Gleichungssysteme
 
 Nach [Lemma 1.8] und [Lemma 4.4] definiert jede Matrix $A: K^n \to K^m$ durch $x \mapsto Ax$.
@@ -70,12 +77,12 @@ x_3
 Gegeben sei das LGS $A \cdot x=b$, wobei $A \sim (m,n)$. Sei $r$ der Spaltenrang von $A$, d.h. $r = dim(SR(A))$. Dann gilt:
 
 1) $\mathbb{L}(A,0) \subseteq K^n$ ist $(n-r)$-dimensionaler UVR
-2) $\mathbb{L} = \o$ oder $\mathbb{L}(A,b)$ hat folgende Form: 
+2) $\mathbb{L} = \emptyset$ oder $\mathbb{L}(A,b)$ hat folgende Form:
 $$\mathbb{L}(A,b) = v + \mathbb{L}(A,0) \text{ , wobei } v \in \mathbb{L}(A,b) \text{ eine beliebige Lösung ist}$$
 
 ### Beweis
 
-(1) Sei $f: K^n \to K^m$ die durch A definierte lineare Abbildung mit $f(x) = A \cdot x$. Die Spalten von $A$ sind genau die Bilder $f(e_j)$ der Standardbasisvektoren: $f(e_j) = A \cdot e_j = A_{\cdot j}$. \newline Daher sind die Spaltenvektoren von $A$ ein EZS von $Im(f)$, d.h. es gilt $Im(f) = SR(A)$. Daraus folgt $dim(Im(f)) = r$. \newline Mit der Dimensionsformel (siehe 6.2) folgt: 
+(1) Sei $f: K^n \to K^m$ die durch A definierte lineare Abbildung mit $f(x) = A \cdot x$. Die Spalten von $A$ sind genau die Bilder $f(e_j)$ der Standardbasisvektoren: $f(e_j) = A \cdot e_j = A_{\cdot j}$. \newline Daher sind die Spaltenvektoren von $A$ ein EZS von $Im(f)$, d.h. es gilt $Im(f) = SR(A)$. Daraus folgt $dim(Im(f)) = r$. \newline Mit der Dimensionsformel (siehe 6.2) folgt:
 $$ dim(K^n) = dim(Ker(f)) + dim(Im(f)) \iff n = dim(Ker(f)) + r $$ \newline Daraus folgt: $dim(Ker(f)) = n - r$. \newline Da $Ker(f) = \mathbb{L}(A,0) \subseteq K^n$ ist UVR mit $dim(\mathbb{L}(A,0)) = n-r$.
 
 (2) Sei $w \in \mathbb{L}(A,0)$ und $v \in \mathbb{L}(A,b)$, d.h. $A \cdot w = 0$ und $A \cdot v = b$. \newline
@@ -86,14 +93,14 @@ $\implies A \cdot (v-v') = A \cdot v - A \cdot v' = b - b = 0 \quad\implies v - 
 $\implies v' \in v + \mathbb{L}(A,0) \quad\implies \mathbb{L}(A,b) \subseteq v + \mathbb{L}(A,0)$
 
 ### Bemerkung
-- $\mathbb{L}(A,0) \neq \o$, da $0 \in \mathbb{L}(A,0)$
+- $\mathbb{L}(A,0) \neq \emptyset$, da $0 \in \mathbb{L}(A,0)$
 - $0$ heißt die triviale Lösung des homogenen Systems.
 - Ein inhomogenes System hat nicht immer Lösungen.
 
 ## Satz 5.3
 
 Für ein inhomogenes LGS $A \cdot x = b$ mit $A \sim (m,n)$ gilt:
-$$\mathbb{L}(A,b) \neq \o \iff \text{Spaltenrang}(A) = \text{Spaltenrang}((A|b))$$
+$$\mathbb{L}(A,b) \neq \emptyset \iff \text{Spaltenrang}(A) = \text{Spaltenrang}((A|b))$$
 
 ### Beweis
 Definiere: Spaltenrang$(A)$ $=$ Rg$(A)$, Spaltenrang$((A|b))$ $=$ Rg$((A|b))$ \newline

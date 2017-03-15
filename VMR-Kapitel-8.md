@@ -1,3 +1,10 @@
+---
+header-includes:
+  - \usepackage[all]{xy}
+  - \usepackage{tikz}
+  - \usetikzlibrary{calc,matrix}
+---
+
 #8. Determinanten
 Sei $n \in \mathbb{N}$ eine feste Zahl und $N=\{1,...,n\}. \\$
 Eine Abbildung $\sigma: N \to N$ kann man angeben durch ihre Wertetabelle $\sigma = \begin{pmatrix} 1 & 2 & ... & n \\ \sigma(1) & \sigma(2) & ... & \sigma(n) \end{pmatrix} \\$
@@ -100,8 +107,8 @@ Merkregel: Regel von Sarus
        a_{11} & a_{12} & a_{13} & a_{11} & a_{12} \\
        a_{21} & a_{22} & a_{23} & a_{21} & a_{22} \\
        a_{31} & a_{32} & a_{33} & a_{31} & a_{32} \\
-     }; 
- 
+     };
+
      \path ($(sarrus-1-3.north east)+(0.5em,0)$) edge[dotted] ($(sarrus-3-3.south east)+(0.5em,0)$)
            (sarrus-1-1)                          edge         (sarrus-2-2)
            (sarrus-2-2)                          edge         (sarrus-3-3)
@@ -115,7 +122,7 @@ Merkregel: Regel von Sarus
            (sarrus-2-3)                          edge[dashed] (sarrus-1-4)
            (sarrus-3-3)                          edge[dashed] (sarrus-2-4)
            (sarrus-2-4)                          edge[dashed] (sarrus-1-5);
- 
+
      \foreach \c in {1,2,3} {\node[anchor=south] at (sarrus-1-\c.north) {$+$};};
      \foreach \c in {1,2,3} {\node[anchor=north] at (sarrus-3-\c.south) {$-$};};
    \end{tikzpicture}
@@ -127,3 +134,10 @@ Merkregel: Regel von Sarus
 
 ###Bemerkung
 Analoge Rechen- und Merkregeln wie in diesen Fällen ($n=2$ und $n=3$) gibt es für $n \geq 4$ nicht!
+
+##Satz 8.5 (Eigenschaften von Determinanten)
+(1) Homogenität in den Zeilen d.h. gemeinsamer Faktor aller Elemente einer Zeile kann vor die Dterminante gezogen werden)
+(2) Additivität in den Zeilen
+(3) $detI_n=1$
+(4) Addieren des $\lambda-$fachen einer Zeile zu einer anderen Zeile lässt $det$ unverändert
+(5) Zwei Zeilen gleich $\leadsto "det=0"$

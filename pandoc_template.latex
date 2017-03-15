@@ -2,6 +2,10 @@
 
 \documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
 \usepackage[T1]{fontenc}
+\usepackage[all]{xy}
+\usepackage{tikz}
+\usetikzlibrary{calc,matrix}
+\usepackage{stmaryrd}
 
 % -----------------------
 % Using abstracts
@@ -21,6 +25,7 @@
 
 % -----------------------
 \usepackage{gauss}
+\usepackage{stmaryrd}
 
 % patch gauss macros for doing their work in `align'
 % and other amsmath environments; see
