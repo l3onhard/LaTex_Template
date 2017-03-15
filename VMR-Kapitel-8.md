@@ -1,7 +1,3 @@
----
-numbersections: false
----
-
 #8. Determinanten
 Sei $n \in \mathbb{N}$ eine feste Zahl und $N=\{1,...,n\}. \\$
 Eine Abbildung $\sigma: N \to N$ kann man angeben durch ihre Wertetabelle $\sigma = \begin{pmatrix} 1 & 2 & ... & n \\ \sigma(1) & \sigma(2) & ... & \sigma(n) \end{pmatrix} \\$
