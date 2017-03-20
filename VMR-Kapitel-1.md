@@ -88,7 +88,7 @@ Sei $V$ ein KVR. Eine Teilmenge $U \subseteq V$ heißt Untervektorraum (UVR) von
 ##Satz 1.5
 Sei $V$ ein KVR und $U \subseteq V. U$ ist genau dann ein UVR von $V$, wenn gilt:
 
-(UV1) $U \neq \emptyset \\$ 
+(UV1) $U \neq \emptyset \\$
 (UV2) $u,v \in U \implies u+v \in U$ (d.h. $U$ ist abgeschlossen gegenüber der in $V$ induzierten Addition) $\\$
 (UV3) $u \in U, \alpha \in K \implies \alpha \cdot u \in U$ (d.h. U ist abgeschlossen gegenüber der in $V$ induzierten Mulitplikation mit Skalaren)
 
@@ -125,23 +125,23 @@ Seien $V$ und $W$ Vektorräume über $K$. Eine $K$-lineare Abbildung $f:V \to W$
 ##Definition 1.7
 Wei folgt ist eine Multiplikation von Matrizen $A \in K^{(m,n)}$ mit Vektoren aus $K^n$ definiert.
 
-$A \cdot x = 
-\begin{pmatrix} 
-a_{11} & \cdots & a_{1n} 
-\\ \vdots & & \vdots 
-\\ a_{m1} & \cdots & a_{mn} 
-\end{pmatrix} 
-\cdot 
-\begin{pmatrix} x_{1} 
-\\ \vdots 
-\\ x_{n} 
-\end{pmatrix} 
-= 
-\begin{pmatrix} 
-a_{11} \cdot x_1 + \cdots + a_{1n} \cdot x_n 
-\\ \vdots 
-\\ a_{m1} \cdot x_1 + \cdots + a_{mn} \cdot x_n 
-\end{pmatrix} 
+$A \cdot x =
+\begin{pmatrix}
+a_{11} & \cdots & a_{1n}
+\\ \vdots & & \vdots
+\\ a_{m1} & \cdots & a_{mn}
+\end{pmatrix}
+\cdot
+\begin{pmatrix} x_{1}
+\\ \vdots
+\\ x_{n}
+\end{pmatrix}
+=
+\begin{pmatrix}
+a_{11} \cdot x_1 + \cdots + a_{1n} \cdot x_n
+\\ \vdots
+\\ a_{m1} \cdot x_1 + \cdots + a_{mn} \cdot x_n
+\end{pmatrix}
 \in K^m$
 
 ###Beispiel
@@ -153,29 +153,34 @@ Jede Matrix $A \in K^{m,n}$ definiert eine lineare Abbildung $A: K^n \to K^m$ du
 ###Beweis
 $A \cdot (\alpha \cdot x + \beta \cdot y)
 =
-\begin{pmatrix} 
-a_{11} & \cdots & a_{1n} 
-\\ \vdots & & \vdots 
-\\ a_{m1} & \cdots & a_{mn} 
+\begin{pmatrix}
+  a_{11} & \cdots & a_{1n} \\
+  \vdots & & \vdots \\
+  a_{m1} & \cdots & a_{mn}
 \end{pmatrix}
 \cdot
-\begin{pmatrix} 
-\alpha \cdot x_1 + \beta \cdot y_1 
-\\ \vdots 
-\\ \alpha \cdot x_n + \beta \cdot y_n 
+\begin{pmatrix}
+  \alpha \cdot x_1 + \beta \cdot y_1 \\
+  \vdots \\
+  \alpha \cdot x_n + \beta \cdot y_n
 \end{pmatrix} \\
 =
-\begin{pmatrix} 
-a_{11} \cdot (\alpha \cdot x_1 + \beta \cdot y_1)+ \cdots + a_{1n} \cdot (\alpha \cdot x_n + \beta \cdot y_n) 
-\\ \vdots 
-\\ a_{m1} \cdot (\alpha \cdot x_1 + \beta \cdot y_1)+ \cdots + a_{mn} \cdot (\alpha \cdot x_n + \beta \cdot y_n) 
+\begin{pmatrix}
+  a_{11} \cdot (\alpha \cdot x_1 + \beta \cdot y_1)+ \cdots + a_{1n} \cdot (\alpha \cdot x_n + \beta \cdot y_n) \\
+  \vdots \\
+  a_{m1} \cdot (\alpha \cdot x_1 + \beta \cdot y_1)+ \cdots + a_{mn} \cdot (\alpha \cdot x_n + \beta \cdot y_n)
 \end{pmatrix} \\
-= 
-\begin{pmatrix} 
-\alpha \cdot (a_{11} \cdot x_1 + \cdots + a_{1n} \cdot x_n) 
-\\ \vdots \\ \alpha \cdot (a_{m1} \cdot x_1 + \cdots + a_{mn} \cdot x_n) \end{pmatrix} + \begin{pmatrix} \beta \cdot (a_{11} \cdot y_1 + \cdots + a_{1n} \cdot y_n) 
-\\ \vdots 
-\\ \beta \cdot (a_{m1} \cdot y_1 + \cdots + a_{mn} \cdot y_n) 
+=
+\begin{pmatrix}
+  \alpha \cdot (a_{11} \cdot x_1 + \cdots + a_{1n} \cdot x_n) \\
+  \vdots \\
+  \alpha \cdot (a_{m1} \cdot x_1 + \cdots + a_{mn} \cdot x_n)
+\end{pmatrix}
++
+\begin{pmatrix}
+  \beta \cdot (a_{11} \cdot y_1 + \cdots + a_{1n} \cdot y_n) \\
+  \vdots \\
+  \beta \cdot (a_{m1} \cdot y_1 + \cdots + a_{mn} \cdot y_n)
 \end{pmatrix} \\
 =
 \alpha \cdot A \cdot x + \beta \cdot A \cdot y$
@@ -239,7 +244,7 @@ $Im(A)=R(A)$ ("range") $\\$
 $Ker(A)=N(A)$ ("nullspace")
 
 ###Bemerkung
-Sei $f: V \to W$ eine lineare Abbildung. Dann gilt: 
+Sei $f: V \to W$ eine lineare Abbildung. Dann gilt:
 
 (1) $f:V \to W$ surjektiv $\iff Imf=W$
 (2) $f:V \to W$ injektiv $\iff Kerf=\{0\}$
@@ -249,4 +254,3 @@ Seien $U,V$ und $W$ Vektorräume über $K$. Seien $g: U \to V$ und $f: V \to W$ 
 
 ##Beweis
 $(f \circ g)(\alpha \cdot u + \beta \cdot u') = f(g(\alpha \cdot u + \beta \cdot u')) \overset{L}{=} f(\alpha \cdot g(u) + \beta \cdot g(u')) \overset{L}{=} \alpha \cdot f(g(u)) + \beta \cdot f(g(u')) = \alpha \cdot (f \circ g)(u) + \beta \cdot (f \circ g)(u')$
-

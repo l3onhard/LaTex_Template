@@ -141,3 +141,39 @@ Analoge Rechen- und Merkregeln wie in diesen Fällen ($n=2$ und $n=3$) gibt es f
 (3) $detI_n=1$
 (4) Addieren des $\lambda-$fachen einer Zeile zu einer anderen Zeile lässt $det$ unverändert
 (5) Zwei Zeilen gleich $\leadsto "det=0"$
+(6) Vertauschen zweier Zeilen ändert Vorzeichen von $det$
+(7) Zwei Zeilen linear abhängig $\leadsto "det=0"$
+
+##Satz 8.6
+Für jede Matrix $A \in K^{(n,n)}$ gilt $detA=detA^t$
+
+##Beweis
+Homepage!
+
+##Folgerung
+Die in Satz 8.5 für die Zeilen einer Determinante angegebenen Eigenschaften gelten entsprechend für die Spalten einer Determinante.
+
+###Bemerkung
+Wegen der Eigenschaften (4), (6) für die Zeilen und (6) für die Spalten (einer Determinante) stehen für Determinanten genau die elementaren Matrizenumformungen zur Verfügung, die es erlauben, eine Matrix so in Zeilenstufenform zu überführen, dass die Pivtos in den ersten $r$ spalten sitzen, also eine Matrix in obere Dreiecksform zu überführen (vgl. Satz 4.5) und Bemerkung zu Satz 5.5. Daher ist der Wert der Dterminante (bis auf eventuell Vorzeichenänderung) gleich dem Wert der Determinante dieser oberern Dreiecksmatrix. Mit dem folgenden Lemma erhalten wir daher ein einfaches Verfahren zur Berechnung von Determinanten.
+
+##Lemma 8.7
+$\begin{vmatrix}
+a_{11} & \cdots & a_{1n} \\
+\vdots & & \vdots \\
+0 & \cdots & a_{nn}
+\end{vmatrix}
+=a_{11} \cdot a_{22} \cdot ... \cdot a_{nn} = \prod\limits_{i=1}^n a_{ij}$
+
+##Beweis
+Homepage!
+
+###Bemerkung
+Um die Determinante einer $n$-reihigen quadratischen Matrix $A$ zu berechnen, überführt man $A$ mit elementaren Umformungen vom Typ III für die Zeilen und Typ IV für Zeilen und Spalten in eine oberer Dreiecksmatrix $\tilde{A}$. Nach Satz 8.5 (4) bzw. (6) gilt dann, wenn $t$ die Anzahl aller Vertauschungen von Zeilen und Spalten ist, die benutzt werden. $$detA=(-1)^t \cdot det \tilde{A}$$
+Ist $\tilde{A} =(\tilde{a}_{ij})$ so gilt weiter nach Lemma 8.7: $detA=(-1)^t \cdot \tilde{a}_{11} \cdot ... \cdot \tilde{a}_{nn}$
+
+###Beispiel
+$\begin{vmatrix}
+  0 & 1 & 1 \\
+  1 & -2 & -5 \\
+  2 & -3 & -6
+\end{vmatrix}$

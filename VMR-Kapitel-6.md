@@ -27,7 +27,7 @@ Sei $v\in V$ beliebig. Dann ist $f(v) \in Imf$. da $w_1,...,w_r$ Basis von $Imf$
 $f(v')=f(\alpha_1 \cdot u_1+...+\alpha_r \cdot u_r) \\
 = \alpha_1 \cdot f(u_1)+...+\alpha_r \cdot f(u_r) \\
 = \alpha_1 \cdot w_1+...+\alpha_r \cdot w_r \\
-= f(v) \\$ 
+= f(v) \\$
 Daraus folgt: $f(v-v') = 0$, d.h. $v-v' \in Kerf \\$
 Da $v_1,...,v_k$ Basis von $Kerf$, folgt: Es existieren $\beta_1,...,\beta_k \in K$ mit $v-v'=\beta_1 \cdot v_1+...+ \beta_k \cdot v_k \\$
 Insgesamt folgt: $v=\alpha_1 \cdot u_1+...+\alpha_r \cdot u_r+\beta_1 \cdot v_1+...+\beta_k \cdot v_k, v \in span(\mathcal{A}). \\$
@@ -44,7 +44,7 @@ $\mathcal{A}=(u_1,...,u_r,v_1,...,v_k)$ Basis von V mit $r=dim(Imf)$ und $k=dim(
 \implies dimV=r+k$
 
 ##Korollar
-Seien $V,W$ endlich-dimensionale VR, $dimV=dimW$ und $f:V \to W$ eine lineare Abbildung. Dann sind folgende Aussagen äquivalent: 
+Seien $V,W$ endlich-dimensionale VR, $dimV=dimW$ und $f:V \to W$ eine lineare Abbildung. Dann sind folgende Aussagen äquivalent:
 
 (1) $f$ ist injektiv
 (2) $f$ ist surjektiv
@@ -109,7 +109,12 @@ Das bedeutet: Unter dem Isomorphismus $\Phi_\mathcal{B}$ entspricht der Vektor $
 
 ##Definition 6.4
 Sei $V$ ein KVR und $dimV=n$. Dann heißt der zu einer Basis $\mathcal{B}=(v_1,...,v_n)$ von $V$ eindeutig bestimmte Isomorphismus $\Phi_\mathcal{B} : K^n \to V$ mit $\Phi_\mathcal{B} (e_i) =v_i$ für $i=1,...,n$ das durch $\mathcal{B}$ bestimmte Koordinatensystem in $V$. Für $v=x_1 \cdot v_1+...+x_n \cdot v_n \in V$ heißt $x= \begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix} = \Phi_\mathcal{B}^{-1} (v)$ die Koordinatendarstellung von $v$ bzgl. $\mathcal{B}$ und $x_1,...,x_n$ heißten die Koordinaten von $v. \\$
-(Zur Berechnung: $(v_1,...,v_n) \cdot \begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix} = v)$
+(Zur Berechnung: $(v_1,...,v_n) \cdot
+\begin{pmatrix}
+  x_1 \\
+  \vdots
+  \\ x_n
+\end{pmatrix} = v)$
 
 ##Lemma 6.5
 Zu jeder linearen Abbildung $f: K^n \to K^m$ gibt es genau eine Matrix $A \sim (m,n)$ sodass $f(x)=A \cdot x$ für alle $x \in K^n$.
@@ -129,7 +134,7 @@ Seien $V,W$ KVR, $dimV=n, dimW=m, \mathcal{A}=(v_1,...,v_n)$ eine Basis von $V, 
 
 $$\xymatrix{ K^n \ar[d]_{M^{\mathcal{A}}_{\mathcal{B}}(f)} \ar[r]^{\Phi_{\mathcal{A}}} & V \ar[d]^f \\
               K^m \ar[r]^{\Phi_{\mathcal{B}}} & W } $$
-              
+
 wobei $\Phi_{\mathcal{B}} \circ M^{\mathcal{A}}_{\mathcal{B}} (f) = f \circ \Phi_{\mathcal{A}}. \\$
 Oder gleichbedeutend: $M^{\mathcal{A}}_{\mathcal{B}} (f) = \Phi^{-1}_{\mathcal{B}} \circ f \circ \Phi_{\mathcal{A}} \\$
 Man sagt kurz: Das Diagramm ist kommutativ.
@@ -138,9 +143,9 @@ Man sagt kurz: Das Diagramm ist kommutativ.
 Nach Satz 6.3 genügt es zu zeigen, dass $\Phi_{\mathcal{B}} \circ M^{\mathcal{A}}_{\mathcal{B}} (f)$ und $f \circ \Phi_{\mathcal{A}}$ auf der kanonischen Basis $(e_1^{(n)},...,e_n^{(n)})$ von $K^n$ übereinstimmen. Setze $M^{\mathcal{A}}_{\mathcal{B}} (f) =: A. \\
 \left.
 \begin{aligned}
-\Phi_{\mathcal{B}} (A(e_j^{(n)})) = \Phi_{\mathcal{B}} (A_{\bullet j}) = \sum\limits_{i=1}^n  a_{ij} \cdot w_i \\ 
+\Phi_{\mathcal{B}} (A(e_j^{(n)})) = \Phi_{\mathcal{B}} (A_{\bullet j}) = \sum\limits_{i=1}^n  a_{ij} \cdot w_i \\
 f(\Phi_{\mathcal{A}} (e_j^{(n)})) = f(v_j) \overset{6.6}{=} \sum\limits_{i=1}^n  a_{ij} \cdot w_i
-\end{aligned} 
+\end{aligned}
 \right\} \implies Gleichheit$
 
 ###Bemerkung

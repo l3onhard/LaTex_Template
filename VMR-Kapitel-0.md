@@ -43,7 +43,7 @@ $D$ heißt Definintionsbereich, $W$ heißt Zielbereich. Die Menge $f(D)=\{f(x)|x
 
 ###Beispiele
 (1) $f:\mathbb{R} \to \mathbb{R}$ mit $f(x)=x^2$
-(2) Sei $D$ eine Menge. Dann heißt die Abbildung $Id : D \to D$ mit $Id(x)=x$ für $x\in D$ die Identität von $D$. 
+(2) Sei $D$ eine Menge. Dann heißt die Abbildung $Id : D \to D$ mit $Id(x)=x$ für $x\in D$ die Identität von $D$.
 
 Seien $G$ und $H$ zwei nichtleere Mengen. \\
 Dann heißt die Menge $G \times H =\{ (g,h) | g \in G,h \in H \}$ das kartesische Produkt $G$ und $H$.
@@ -76,4 +76,3 @@ inverses Element zu $a: \frac{1}{a}$
 (3) In $\mathbb{R}$ mit den inneren Verknüpfungen $+$ und $\cdot$ gelten die Distributivgesetze: $a \cdot (b+c) = a \cdot b + a \cdot c$ und $(b+c) \cdot a = b \cdot a + c \cdot a$.
 
 Man sagt wegen (1), (2), (3): $\mathbb{R}$ ist eine Körper. (Anderes Beispiel eines Körpers: $\mathbb{C}$)
-
