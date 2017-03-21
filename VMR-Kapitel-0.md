@@ -1,7 +1,3 @@
----
-numbersections: false
----
-
 # 0. Grundlegendes
 
 ## Menge

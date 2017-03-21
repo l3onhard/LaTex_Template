@@ -7,7 +7,11 @@ header-includes:
 
 #8. Determinanten
 Sei $n \in \mathbb{N}$ eine feste Zahl und $N=\{1,...,n\}. \\$
-Eine Abbildung $\sigma: N \to N$ kann man angeben durch ihre Wertetabelle $\sigma = \begin{pmatrix} 1 & 2 & ... & n \\ \sigma(1) & \sigma(2) & ... & \sigma(n) \end{pmatrix} \\$
+Eine Abbildung $\sigma: N \to N$ kann man angeben durch ihre Wertetabelle $\sigma =
+\begin{pmatrix}
+  1 & 2 & ... & n \\
+  \sigma(1) & \sigma(2) & ... & \sigma(n)
+\end{pmatrix} \\$
 Dabei sind die zugeordneten Zahlen $\sigma(k)$ wieder aus $N$. Wann ist $\sigma$ bijektiv? Wenn in der unteren Reihe der Wertetabelle jede Zahl aus $N$ genau einmal vorkommt.
 
 ##Definition 8.1
@@ -26,12 +30,39 @@ $(\gamma_n, \circ)$ ist eine Gruppe. Sie heißt die symmetrische Gruppe (zur Zah
 Für $n \geq 3$ ist $\gamma_n$ nicht kommutativ.
 
 ###Beispiel
-$\sigma = \begin{pmatrix} 1 & 2 & 3 \\ 3 & 1 & 2 \end{pmatrix}$ und $\tau = \begin{pmatrix} 1 & 2 & 3 \\ 1 & 3 & 2 \end{pmatrix} \\
-\sigma \circ \tau = \begin{pmatrix} 1 & 2 & 3 \\ 3 & 2 & 1 \end{pmatrix} \neq \begin{pmatrix} 1 & 2 & 3 \\ 2 & 1 & 3 \end{pmatrix} = \tau \circ \sigma \\$
-Weiter ist $\sigma^{-1} = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 3 & 1 \end{pmatrix}$ und $\tau^{-1} = \begin{pmatrix} 1 & 2 & 3 \\ 1 & 3 & 2 \end{pmatrix} = \tau$
+$\sigma =
+\begin{pmatrix}
+  1 & 2 & 3 \\
+  3 & 1 & 2
+\end{pmatrix}$ und $\tau =
+\begin{pmatrix}
+  1 & 2 & 3 \\
+  1 & 3 & 2
+\end{pmatrix} \\
+\sigma \circ \tau =
+\begin{pmatrix}
+  1 & 2 & 3 \\
+  3 & 2 & 1
+\end{pmatrix} \neq
+\begin{pmatrix}
+  1 & 2 & 3 \\
+  2 & 1 & 3
+\end{pmatrix} = \tau \circ \sigma \\$
+Weiter ist $\sigma^{-1} =
+\begin{pmatrix}
+  1 & 2 & 3 \\
+  2 & 3 & 1
+\end{pmatrix}$ und $\tau^{-1} =
+\begin{pmatrix}
+  1 & 2 & 3 \\
+  1 & 3 & 2
+\end{pmatrix} = \tau$
 
 ###Bemerkung
-In der unteren Zeile einer Permutation $\sigma = \begin{pmatrix} 1 & ... & n \\ \sigma(1) & ... & \sigma(n) \end{pmatrix}$ kann man durch Vertauschungen jeweils benachbarter Zahlen erreichen, dass die Zahlen dann in der natürlichen Reihenfolge hintereinander stehen. Gleichgültig, wie man dabei vorgeht, benötigt man für eine Permutation $\sigma$ immer eine gerade Anzahl von Vertauschungen. Dementsprechend spricht man von geraden bzw. ungeraden Permutationen und ordnet jeder Permutation ein Vorzeichen zu: das Vorzeichen + der geraden und das Worzeichen - der ungeraden Permutationen. Um das Vorzeichen zu bestimmen, definieren wir für jede Permutation $\sigma = \begin{pmatrix} 1 & ... & n \\ \sigma(1) & ... & \sigma(n) \end{pmatrix}$ die folgenden Anzahlen: $\\
+In der unteren Zeile einer Permutation $\sigma = \begin{pmatrix} 1 & ... & n \\ \sigma(1) & ... & \sigma(n) \end{pmatrix}$ kann man durch Vertauschungen jeweils benachbarter Zahlen erreichen, dass die Zahlen dann in der natürlichen Reihenfolge hintereinander stehen. Gleichgültig, wie man dabei vorgeht, benötigt man für eine Permutation $\sigma$ immer eine gerade Anzahl von Vertauschungen. Dementsprechend spricht man von geraden bzw. ungeraden Permutationen und ordnet jeder Permutation ein Vorzeichen zu: das Vorzeichen + der geraden und das Worzeichen - der ungeraden Permutationen. Um das Vorzeichen zu bestimmen, definieren wir für jede Permutation $\sigma = \begin{pmatrix}
+  1 & ... & n \\
+  \sigma(1) & ... & \sigma(n)
+\end{pmatrix}$ die folgenden Anzahlen: $\\
 \Phi_1 (\sigma)=$ Anzahl der Zahlen in $\sigma(1),...,\sigma(n)$ links von 1 $\\
 \Phi_2 (\sigma)=$ Anzahl der Zahlen in $\sigma(1),...,\sigma(n)$ links von 2 und $>2 \\
 \vdots \\
@@ -158,9 +189,9 @@ Wegen der Eigenschaften (4), (6) für die Zeilen und (6) für die Spalten (einer
 
 ##Lemma 8.7
 $\begin{vmatrix}
-a_{11} & \cdots & a_{1n} \\
-\vdots & & \vdots \\
-0 & \cdots & a_{nn}
+  a_{11} & \cdots & a_{1n} \\
+  \vdots & & \vdots \\
+  0 & \cdots & a_{nn}
 \end{vmatrix}
 =a_{11} \cdot a_{22} \cdot ... \cdot a_{nn} = \prod\limits_{i=1}^n a_{ij}$
 
@@ -172,8 +203,29 @@ Um die Determinante einer $n$-reihigen quadratischen Matrix $A$ zu berechnen, ü
 Ist $\tilde{A} =(\tilde{a}_{ij})$ so gilt weiter nach Lemma 8.7: $detA=(-1)^t \cdot \tilde{a}_{11} \cdot ... \cdot \tilde{a}_{nn}$
 
 ###Beispiel
-$\begin{vmatrix}
+$\begin{gmatrix}[v]
   0 & 1 & 1 \\
   1 & -2 & -5 \\
   2 & -3 & -6
-\end{vmatrix}$
+  \rowops\swap{0}{1}
+\end{gmatrix} = -
+\begin{gmatrix}[v]
+  1 & -2 & -5 \\
+  0 & 1 & 1 \\
+  2 & -3 & -6
+  \rowops\add[-2]{0}{2}
+\end{gmatrix} = -
+\begin{gmatrix}[v]
+  1 & -2 & -5 \\
+  0 & 1 & 1 \\
+  0 & 1 & 4
+  \rowops\add[-1]{1}{2}
+\end{gmatrix} = -
+\begin{gmatrix}[v]
+  1 & -2 & -5 \\
+  0 & 1 & 1 \\
+  0 & 0 & 3
+\end{gmatrix} \overset{(8.7)}{=} -1 \cdot 1 \cdot 3 = -3$
+
+##Folgerung 1)
+$A \in K^{(n,n)}$ Matrix. Dann gilt:

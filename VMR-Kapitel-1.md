@@ -46,11 +46,36 @@ $0 = (-0 \cdot u + 0 \cdot u) + 0 \cdot u = 0+0 \cdot u = 0 \cdot u$
 
 ###Bemerkung
 Geordnet bedeutet, dass die Reihenfolge der Komponenten wichtig ist:
-$\begin{pmatrix} x_{1} \\ \vdots \\ x_{n} \end{pmatrix} = \begin{pmatrix} y_{1} \\ \vdots \\ y_{n} \end{pmatrix} \iff x_{1} = y_{1}, ... , x_{n} = y_{n}$
+$\begin{pmatrix}
+  x_{1} \\
+  \vdots \\
+  x_{n}
+\end{pmatrix} =
+\begin{pmatrix}
+  y_{1} \\
+  \vdots \\
+  y_{n}
+\end{pmatrix} \iff x_{1} = y_{1}, ... , x_{n} = y_{n}$
 
-Addition im $K^n: \begin{pmatrix} x_{1} \\ \vdots \\ x_{n} \end{pmatrix} + \begin{pmatrix} y_{1} \\ \vdots \\ y_{n} \end{pmatrix} = \begin{pmatrix} x_{1} + y_{1} \\ \vdots \\ x_{n} + y_{n} \end{pmatrix}$
+Addition im $K^n:
+\begin{pmatrix}
+  x_{1} \\
+  \vdots \\
+  x_{n}
+\end{pmatrix} +
+\begin{pmatrix}
+  y_{1} \\
+  \vdots \\
+  y_{n}
+\end{pmatrix} =
+\begin{pmatrix}
+  x_{1} + y_{1} \\
+  \vdots \\
+  x_{n} + y_{n}
+\end{pmatrix}$
 
-Multiplikation mit Skalaren im $K^n : \alpha \cdot \begin{pmatrix} x_{1} \\ \vdots \\ x_{n} \end{pmatrix} = \begin{pmatrix} \alpha \cdot x_{1} \\ \vdots  \\\alpha \cdot x_{n} \end{pmatrix}$
+Multiplikation mit Skalaren im $K^n : \alpha \cdot
+\begin{pmatrix} x_{1} \\ \vdots \\ x_{n} \end{pmatrix} = \begin{pmatrix} \alpha \cdot x_{1} \\ \vdots  \\\alpha \cdot x_{n} \end{pmatrix}$
 
 (2) Vektorraum der Matrizen
 

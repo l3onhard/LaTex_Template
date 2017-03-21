@@ -1,8 +1,3 @@
----
-numbersections: false
----
-
-
 #6. Lineare Abbildungen und Matrizen
 
 ##Erinnerung
