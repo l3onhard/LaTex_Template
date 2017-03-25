@@ -34,7 +34,8 @@ $\sigma =
 \begin{pmatrix}
   1 & 2 & 3 \\
   3 & 1 & 2
-\end{pmatrix}$ und $\tau =
+\end{pmatrix}$
+und $\tau =
 \begin{pmatrix}
   1 & 2 & 3 \\
   1 & 3 & 2
@@ -43,16 +44,19 @@ $\sigma =
 \begin{pmatrix}
   1 & 2 & 3 \\
   3 & 2 & 1
-\end{pmatrix} \neq
+\end{pmatrix}
+\neq
 \begin{pmatrix}
   1 & 2 & 3 \\
   2 & 1 & 3
-\end{pmatrix} = \tau \circ \sigma \\$
+\end{pmatrix}
+= \tau \circ \sigma \\$
 Weiter ist $\sigma^{-1} =
 \begin{pmatrix}
   1 & 2 & 3 \\
   2 & 3 & 1
-\end{pmatrix}$ und $\tau^{-1} =
+\end{pmatrix}$
+und $\tau^{-1} =
 \begin{pmatrix}
   1 & 2 & 3 \\
   1 & 3 & 2
@@ -62,7 +66,8 @@ Weiter ist $\sigma^{-1} =
 In der unteren Zeile einer Permutation $\sigma = \begin{pmatrix} 1 & ... & n \\ \sigma(1) & ... & \sigma(n) \end{pmatrix}$ kann man durch Vertauschungen jeweils benachbarter Zahlen erreichen, dass die Zahlen dann in der natürlichen Reihenfolge hintereinander stehen. Gleichgültig, wie man dabei vorgeht, benötigt man für eine Permutation $\sigma$ immer eine gerade Anzahl von Vertauschungen. Dementsprechend spricht man von geraden bzw. ungeraden Permutationen und ordnet jeder Permutation ein Vorzeichen zu: das Vorzeichen + der geraden und das Worzeichen - der ungeraden Permutationen. Um das Vorzeichen zu bestimmen, definieren wir für jede Permutation $\sigma = \begin{pmatrix}
   1 & ... & n \\
   \sigma(1) & ... & \sigma(n)
-\end{pmatrix}$ die folgenden Anzahlen: $\\
+\end{pmatrix}$
+die folgenden Anzahlen: $\\
 \Phi_1 (\sigma)=$ Anzahl der Zahlen in $\sigma(1),...,\sigma(n)$ links von 1 $\\
 \Phi_2 (\sigma)=$ Anzahl der Zahlen in $\sigma(1),...,\sigma(n)$ links von 2 und $>2 \\
 \vdots \\
@@ -74,7 +79,11 @@ Für eine Permutation $\sigma \in \gamma_n$ heißt $\Phi(\sigma)$ die Fehlstands
 Eine Permutation $\sigma$ heißt gerade (bzw. ungerade), wenn $\Phi(\sigma)$ gerade (bzw. ungerade) ist.
 
 ###Beispiel
-$\sigma = \begin{pmatrix} 1 & 2 & 3 & 4 \\ 3 & 4 & 2 &1 \end{pmatrix} \\
+$\sigma =
+\begin{pmatrix}
+  1 & 2 & 3 & 4 \\
+  3 & 4 & 2 & 1
+\end{pmatrix} \\
 \Phi_1(\sigma)=3,\Phi_2(\sigma)=2, \Phi_3(\sigma)=0 \\
 \implies \Phi(\sigma)=5$ ist ungerade $\\
 \implies sgn(\sigma)= (-1)^5 = -1$
@@ -88,16 +97,45 @@ Für $\sigma, \tau \in \gamma_n$ gilt:
 ##Definition 8.4
 Sei $K^{(n,n)}$ der Vektorraum der $n$-reihigen Matrizen, $n \in \mathbb{N}. \\$
 Die Determinantenfunktion $det: K^{(n,n)} \to K$ ordnet jeder Matrix $A \in K^{(n,n)}$ eine Zahl aus $K$ zu, die die Determinante von $A$ ist und wie folgt bezeichnet wird: $\\
-A = \begin{pmatrix} a_{11} & ... & a_{1n} \\ a_{n1} & ... & a_{nn} \end{pmatrix} \to det(A) = \begin{vmatrix} a_{11} & ... & a_{1n} \\ a_{n1} & ... & a_{nn} \end{vmatrix} \\$
+A =
+\begin{pmatrix}
+  a_{11} & ... & a_{1n} \\
+  a_{n1} & ... & a_{nn}
+\end{pmatrix}
+\to det(A) =
+\begin{vmatrix}
+  a_{11} & ... & a_{1n} \\
+  a_{n1} & ... & a_{nn}
+\end{vmatrix} \\$
 Dabei ist $det(A) \sum\limits_{\sigma \in \gamma_n} sgn(\sigma) \cdot a_{1\sigma(1)} \cdot ... \cdot a_{n\sigma(n)}$
 
 Berechnung der 2- und 3-reihigen Dterminanten:
 
 (1) $n=2 \\
-A = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix} \implies det(A) = a_{11} \cdot a_{22} - a_{12} \cdot a_{21} \\$
-Denn: $N=\{1,2\} \to \gamma_2 = \{ \tau= \begin{pmatrix} 1 & 2 \\ 1 & 2 \end{pmatrix} , \sigma = \begin{pmatrix} 1 & 2 \\ 2 & 1 \end{pmatrix} \}$ mit $sgn(\tau)= (-1)^0 = 1$ und $sgn(\sigma) = (-1)^1 = -1 \\$
+A =
+\begin{pmatrix}
+  a_{11} & a_{12} \\
+  a_{21} & a_{22}
+\end{pmatrix}
+\implies det(A) = a_{11} \cdot a_{22} - a_{12} \cdot a_{21} \\$
+Denn: $N=\{1,2\} \to \gamma_2 = \{ \tau=
+\begin{pmatrix}
+  1 & 2 \\
+  1 & 2
+\end{pmatrix}
+, \sigma =
+\begin{pmatrix}
+  1 & 2 \\
+  2 & 1
+\end{pmatrix}
+\}$ mit $sgn(\tau)= (-1)^0 = 1$ und $sgn(\sigma) = (-1)^1 = -1 \\$
 (2) $n=3 \\
-A = \begin{pmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{pmatrix} \\$
+A =
+\begin{pmatrix}
+  a_{11} & a_{12} & a_{13} \\
+  a_{21} & a_{22} & a_{23} \\
+  a_{31} & a_{32} & a_{33}
+\end{pmatrix} \\$
 
 
 $$
@@ -160,8 +198,19 @@ Merkregel: Regel von Sarus
 
 
 ###Beispiele
-(1) $det \begin{pmatrix} 3 & 1 \\ 4 & -2 \end{pmatrix} = 3\cdot (-2) - 1 \cdot 4= -10 \\$
-(2) $det \begin{pmatrix} 1 & 2 & 3 \\ -4 & 5 & 6 \\ 7 & -8 & 9 \end{pmatrix} = 1 \cdot 5 \cdot 9 + 2 \cdot 6 \cdot 7+ 3 \cdot (-4) \cdot (-8) - 3 \cdot 5 \cdot 7 - 1 \cdot 6 \cdot (-8) - 2 \cdot (-4) \cdot 9 =45+84+96-105+48+72 = 240$
+(1) $det
+\begin{pmatrix}
+  3 & 1 \\
+  4 & -2
+\end{pmatrix}
+= 3\cdot (-2) - 1 \cdot 4= -10 \\$
+(2) $det
+\begin{pmatrix}
+  1 & 2 & 3 \\
+  -4 & 5 & 6 \\
+  7 & -8 & 9
+\end{pmatrix}
+= 1 \cdot 5 \cdot 9 + 2 \cdot 6 \cdot 7+ 3 \cdot (-4) \cdot (-8) - 3 \cdot 5 \cdot 7 - 1 \cdot 6 \cdot (-8) - 2 \cdot (-4) \cdot 9 =45+84+96-105+48+72 = 240$
 
 ###Bemerkung
 Analoge Rechen- und Merkregeln wie in diesen Fällen ($n=2$ und $n=3$) gibt es für $n \geq 4$ nicht!
@@ -208,24 +257,50 @@ $\begin{gmatrix}[v]
   1 & -2 & -5 \\
   2 & -3 & -6
   \rowops\swap{0}{1}
-\end{gmatrix} = -
+\end{gmatrix}
+= -
 \begin{gmatrix}[v]
   1 & -2 & -5 \\
   0 & 1 & 1 \\
   2 & -3 & -6
   \rowops\add[-2]{0}{2}
-\end{gmatrix} = -
+\end{gmatrix}
+= -
 \begin{gmatrix}[v]
   1 & -2 & -5 \\
   0 & 1 & 1 \\
   0 & 1 & 4
   \rowops\add[-1]{1}{2}
-\end{gmatrix} = -
+\end{gmatrix}
+= -
 \begin{gmatrix}[v]
   1 & -2 & -5 \\
   0 & 1 & 1 \\
   0 & 0 & 3
-\end{gmatrix} \overset{(8.7)}{=} -1 \cdot 1 \cdot 3 = -3$
+\end{gmatrix}
+\overset{(8.7)}{=} -1 \cdot 1 \cdot 3 = -3$
 
 ##Folgerung 1)
 $A \in K^{(n,n)}$ Matrix. Dann gilt:
+$Rg(A)=n \iff detA \neq 0$
+
+##Beweis
+$A\overset{\text{elementare}}{\underset{\text{Umformungen}}{\leadsto}} \tilde{A}$ (obere Dreiecksmatrix) $\\$
+Der Rang ändert sich dabei nicht! $\\
+Rg(A)=n \iff Rg(\tilde{A})=n \\
+\iff \tilde{a}_{ii}=0$ für $i=1,...,n \\
+\overset{(8.7)}{\iff} det \tilde{A} = \tilde{a}_{11} \cdot ... \cdot \tilde{a}_{nn} \neq 0 \\
+\overset{(8.5)}{\iff} detA \neq 0
+\leftarrow det\tilde{A}=(-1)^t \cdot detA (t: $Anzahl Vertauschungen)
+
+##Korollar
+$A \in K^{(n,n)}$. Dann gilt:
+Zeile(Spalten) von $A \iff detA=0$ linear unabhängig
+
+##Folgerung 2)
+$A \in K^{(n,n)}.$ Dann gilt: $A$ invertierbar $\iff detA \neq 0$
+
+##Beweis
+$A$ invertierbar $\iff Rg(A)=n \overset{\text{Folg.A}}{\iff} detA \neq 0$
+
+#Definition 8.8

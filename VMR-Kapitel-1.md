@@ -42,7 +42,13 @@ $0 = (-0 \cdot u + 0 \cdot u) + 0 \cdot u = 0+0 \cdot u = 0 \cdot u$
 (4) $u+(-1) \cdot u \overset{V2(d)}{=} 1 \cdot u + (-1) \cdot u \overset{V2(a)}{=} (1-1) \cdot u = 0 \cdot u \overset{(1)}{=} 0 \implies (-1) \cdot u = -u$
 
 ###Beispiele
-(1) Das Standardbeispiel eines KVRs ist der sogenannte Standardraum $K^n=\{ x = \begin{pmatrix} x_{1} \\ \vdots \\ x_{n}\end{pmatrix}| x_{i} \in K$ für $i=1,...,n \}$ der geordneten $n$-Tupel von Skalaren $x_{i} \in K$. Die $x_{i}$ heißen Komponenten des Vektors $x$.
+(1) Das Standardbeispiel eines KVRs ist der sogenannte Standardraum $K^n=\{ x =
+\begin{pmatrix}
+  x_{1} \\
+  \vdots \\
+  x_{n}
+\end{pmatrix}
+| x_{i} \in K$ für $i=1,...,n \}$ der geordneten $n$-Tupel von Skalaren $x_{i} \in K$. Die $x_{i}$ heißen Komponenten des Vektors $x$.
 
 ###Bemerkung
 Geordnet bedeutet, dass die Reihenfolge der Komponenten wichtig ist:
@@ -50,24 +56,28 @@ $\begin{pmatrix}
   x_{1} \\
   \vdots \\
   x_{n}
-\end{pmatrix} =
+\end{pmatrix}
+=
 \begin{pmatrix}
   y_{1} \\
   \vdots \\
   y_{n}
-\end{pmatrix} \iff x_{1} = y_{1}, ... , x_{n} = y_{n}$
+\end{pmatrix}
+\iff x_{1} = y_{1}, ... , x_{n} = y_{n}$
 
 Addition im $K^n:
 \begin{pmatrix}
   x_{1} \\
   \vdots \\
   x_{n}
-\end{pmatrix} +
+\end{pmatrix}
++
 \begin{pmatrix}
   y_{1} \\
   \vdots \\
   y_{n}
-\end{pmatrix} =
+\end{pmatrix}
+=
 \begin{pmatrix}
   x_{1} + y_{1} \\
   \vdots \\
@@ -75,19 +85,41 @@ Addition im $K^n:
 \end{pmatrix}$
 
 Multiplikation mit Skalaren im $K^n : \alpha \cdot
-\begin{pmatrix} x_{1} \\ \vdots \\ x_{n} \end{pmatrix} = \begin{pmatrix} \alpha \cdot x_{1} \\ \vdots  \\\alpha \cdot x_{n} \end{pmatrix}$
+\begin{pmatrix}
+  x_{1} \\
+  \vdots \\
+  x_{n}
+\end{pmatrix}
+=
+\begin{pmatrix}
+  \alpha \cdot x_{1} \\
+  \vdots  \\
+  \alpha \cdot x_{n}
+\end{pmatrix}$
 
 (2) Vektorraum der Matrizen
 
 ##Definition 1.3
-Sei $K$ ein Körper (z.B. $K=\mathbb{R}$). Für $m,n \in \mathbb{N}$ seien $m$ Zahlenreihen aus jeweils $n$ Zahlen aus $K$ gebildet und die $m$ Zahlenreihen so untereinander geschrieben, dass die Zahlen in Form eines Rechtecks durch Klammern zu einem neuen Objekt zusammengefasst werden. Das Schema $A = \begin{pmatrix}  a_{11} & \cdots & a_{1n} \\ \vdots & & \vdots \\ a_{m1} & \cdots & a_{mn} \end{pmatrix}$ heißt dann eine Matrix vom Typ $(m,n)$. Die $a_{ij}$ nennt man allgemein die Einträge der Matrix.
+Sei $K$ ein Körper (z.B. $K=\mathbb{R}$). Für $m,n \in \mathbb{N}$ seien $m$ Zahlenreihen aus jeweils $n$ Zahlen aus $K$ gebildet und die $m$ Zahlenreihen so untereinander geschrieben, dass die Zahlen in Form eines Rechtecks durch Klammern zu einem neuen Objekt zusammengefasst werden. Das Schema $A =
+\begin{pmatrix}
+  a_{11} & \cdots & a_{1n} \\
+  \vdots & & \vdots \\
+  a_{m1} & \cdots & a_{mn}
+\end{pmatrix}$
+heißt dann eine Matrix vom Typ $(m,n)$. Die $a_{ij}$ nennt man allgemein die Einträge der Matrix.
 
 Schreibenweisen:
 $A \sim (m,n)$
 $A= (a_{ij}) \sim (m,n)$
 $A= (a_{ij})_{1 \leq i \leq m, 1 \leq j \leq n}$
 
-Die Menge der Matrizen $A \sim (m,n)$ mit Einträgen aus K bezeichnet man mit $K^{(m,n)}: K^{(m,n)} = \{ A = \begin{pmatrix} a_{11} & \cdots & a_{1n} \\ \vdots & & \vdots \\ a_{m1} & \cdots & a_{mn} \end{pmatrix} | a_{ij} \in K$ für $1 \leq i \leq m, 1 \leq j \leq n \}$.
+Die Menge der Matrizen $A \sim (m,n)$ mit Einträgen aus K bezeichnet man mit $K^{(m,n)}: K^{(m,n)} = \{ A =
+\begin{pmatrix}
+  a_{11} & \cdots & a_{1n} \\
+  \vdots & & \vdots \\
+  a_{m1} & \cdots & a_{mn}
+\end{pmatrix}
+| a_{ij} \in K$ für $1 \leq i \leq m, 1 \leq j \leq n \}$.
 
 $K^{(m,n)}$ ist ein KVR, wenn man definiert:
 
@@ -152,25 +184,45 @@ Wei folgt ist eine Multiplikation von Matrizen $A \in K^{(m,n)}$ mit Vektoren au
 
 $A \cdot x =
 \begin{pmatrix}
-a_{11} & \cdots & a_{1n}
-\\ \vdots & & \vdots
-\\ a_{m1} & \cdots & a_{mn}
+  a_{11} & \cdots & a_{1n} \\
+  \vdots & & \vdots \\
+  a_{m1} & \cdots & a_{mn}
 \end{pmatrix}
 \cdot
-\begin{pmatrix} x_{1}
-\\ \vdots
-\\ x_{n}
+\begin{pmatrix}
+  x_{1} \\
+  \vdots \\
+  x_{n}
 \end{pmatrix}
 =
 \begin{pmatrix}
-a_{11} \cdot x_1 + \cdots + a_{1n} \cdot x_n
-\\ \vdots
-\\ a_{m1} \cdot x_1 + \cdots + a_{mn} \cdot x_n
+  a_{11} \cdot x_1 + \cdots + a_{1n} \cdot x_n \\
+  \vdots \\
+  a_{m1} \cdot x_1 + \cdots + a_{mn} \cdot x_n
 \end{pmatrix}
 \in K^m$
 
 ###Beispiel
-$\begin{pmatrix} 1 & -1 & 2 \\ 2 & 0 & 1 \end{pmatrix} \cdot \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix} = \begin{pmatrix} 1 \cdot 1 &+ (-1) \cdot 2 &+ 2 \cdot 3 \\ 2 \cdot 1 &+ 0 \cdot 2 &+ 1 \cdot 3 \end{pmatrix} = \begin{pmatrix} 5 \\ 5 \end{pmatrix}$
+$\begin{pmatrix}
+  1 & -1 & 2 \\
+  2 & 0 & 1
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+  1 \\
+  2 \\
+  3
+\end{pmatrix}
+=
+\begin{pmatrix}
+  1 \cdot 1 &+ (-1) \cdot 2 &+ 2 \cdot 3 \\
+  2 \cdot 1 &+ 0 \cdot 2 &+ 1 \cdot 3
+\end{pmatrix}
+=
+\begin{pmatrix}
+  5 \\
+  5
+\end{pmatrix}$
 
 ##Lemma 1.8
 Jede Matrix $A \in K^{m,n}$ definiert eine lineare Abbildung $A: K^n \to K^m$ durch $x \mapsto A \cdot x.$

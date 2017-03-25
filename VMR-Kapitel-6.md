@@ -109,13 +109,43 @@ Sei $V$ ein KVR und $dimV=n$. Dann heißt der zu einer Basis $\mathcal{B}=(v_1,.
   x_1 \\
   \vdots
   \\ x_n
-\end{pmatrix} = v)$
+\end{pmatrix}
+= v)$
 
 ##Lemma 6.5
 Zu jeder linearen Abbildung $f: K^n \to K^m$ gibt es genau eine Matrix $A \sim (m,n)$ sodass $f(x)=A \cdot x$ für alle $x \in K^n$.
 
 ##Beweis
-Sei $(e_1,...,e_n)$ die Standardbasis von $K^n$ und sei $f(e_1)= \begin{pmatrix} a_{11} \\ \vdots \\ a_{m1} \end{pmatrix} ,..., f(e_n) = \begin{pmatrix} a_{1n} \\ \vdots \\ a_{mn} \end{pmatrix}.$ Dann ist $A= \begin{pmatrix} a_{11} & \cdots & a_{1n} \\ \vdots & & \vdots \\ a_{m1} & \cdots & a_{mn} \end{pmatrix}$, da $A \cdot x = x_1 \cdot \begin{pmatrix} a_{11} \\ \vdots \\ a_{m1} \end{pmatrix} + ... + x_n \cdot \begin{pmatrix} a_{1n} \\ \vdots \\ a_{mn} \end{pmatrix} = x_1 \cdot f(e_1)+...+x_n \cdot f(e_n) = f(x)$
+Sei $(e_1,...,e_n)$ die Standardbasis von $K^n$ und sei $f(e_1)= \begin{pmatrix}
+  a_{11} \\
+  \vdots \\
+  a_{m1}
+\end{pmatrix}
+,..., f(e_n) =
+\begin{pmatrix}
+  a_{1n} \\
+  \vdots \\
+  a_{mn}
+\end{pmatrix}
+.$ Dann ist $A=
+\begin{pmatrix}
+  a_{11} & \cdots & a_{1n} \\
+  \vdots & & \vdots \\
+  a_{m1} & \cdots & a_{mn}
+\end{pmatrix}$
+, da $A \cdot x = x_1 \cdot
+\begin{pmatrix}
+  a_{11} \\
+  \vdots \\
+  a_{m1}
+\end{pmatrix}
++ ... + x_n \cdot
+\begin{pmatrix}
+  a_{1n} \\
+  \vdots \\
+  a_{mn}
+\end{pmatrix}
+= x_1 \cdot f(e_1)+...+x_n \cdot f(e_n) = f(x)$
 
 ##Satz 6.6
 Seien $V$ und $W$ KVR, $\mathcal{A}=(v_1,...,v_n)$ Basis von $V$ und $\mathcal{B}=(w_1,...,w_m)$ Basis von $W$. Dann gibt es zu jeder linearen Abbildung $f: V \to W$ gneau eine Matrix $A=(a_{ij}) \in K^{(m,n)}$, sodass $f(v_j)= \sum\limits_{i=1}^m  a_{ij} \cdot w_i$ für $j=1,...,n. \\$
@@ -158,27 +188,71 @@ M_{\mathcal{B}}^{\mathcal{A}} (f) =
 1 & -1 & -2
 \end{pmatrix} \\
 \Phi_{\mathcal{A}} : \mathbb{R}^3 \to \mathbb{R}^3$ mit $\Phi_{\mathcal{A}} (e_i) = v_i \\
-\begin{pmatrix} \alpha_1 \\ \alpha_2 \\ \alpha_3 \end{pmatrix} \overset{\Phi_{\mathcal{A}}}{\mapsto} \alpha_1 \cdot v_1 + \alpha_2 \cdot v_2 + \alpha_3 \cdot v_3 \\
+\begin{pmatrix}
+  \alpha_1 \\
+  \alpha_2 \\
+  \alpha_3
+\end{pmatrix}
+\overset{\Phi_{\mathcal{A}}}{\mapsto} \alpha_1 \cdot v_1 + \alpha_2 \cdot v_2 + \alpha_3 \cdot v_3 \\
 \Phi_{\mathcal{B}} : \mathbb{R}^2 \to \mathbb{R}^2$ mit $\Phi_{\mathcal{B}} (e_j) = w_j \\
 \begin{pmatrix}
 \beta_1 \\ \beta_2
 \end{pmatrix}
 \overset{\Phi_{\mathcal{B}}}{\mapsto} \beta_1 \cdot w_1 + \beta_2 \cdot w_2 \\$
-Nach der Folgerung gilt dann: $\Phi_{\mathcal{B}} (M_{\mathcal{B}}^{\mathcal{A}} (f) \cdot \begin{pmatrix} \alpha_1 \\ \alpha_2 \\ \alpha_3 \end{pmatrix} ) = f(\Phi_{\mathcal{A}} \cdot \begin{pmatrix} \alpha_1 \\ \alpha_2 \\ \alpha_3 \end{pmatrix} ) \\$
+Nach der Folgerung gilt dann: $\Phi_{\mathcal{B}} (M_{\mathcal{B}}^{\mathcal{A}} (f) \cdot
+\begin{pmatrix}
+  \alpha_1 \\
+  \alpha_2 \\
+  \alpha_3
+\end{pmatrix}
+) = f(\Phi_{\mathcal{A}} \cdot
+\begin{pmatrix}
+  \alpha_1 \\
+  \alpha_2 \\
+  \alpha_3
+\end{pmatrix}
+) \\$
 Sei $v = -2 \cdot v_1 + 6 \cdot v_2 -5 \cdot v_3.$ Bestimme $f(v): \\
 f(v) = f(-2 \cdot v_1 + 6 \cdot v_2 - 5 \cdot v_3) \\
-= f( \Phi_{\mathcal{A}} \cdot \begin{pmatrix} -2 \\ 6 \\ -5 \end{pmatrix} \\
-= \Phi_{\mathcal{B}} (M_{\mathcal{B}}^{\mathcal{A}} (f) \cdot \begin{pmatrix} -2 \\ 6 \\ -5 \end{pmatrix} ) \\
-= \Phi_{\mathcal{B}} (\begin{pmatrix}
+= f( \Phi_{\mathcal{A}} \cdot
+\begin{pmatrix}
+  -2 \\
+  6 \\
+  -5
+\end{pmatrix} \\
+= \Phi_{\mathcal{B}} (M_{\mathcal{B}}^{\mathcal{A}} (f) \cdot
+\begin{pmatrix}
+  -2 \\
+  6 \\
+  -5
+\end{pmatrix} ) \\
+= \Phi_{\mathcal{B}} (
+\begin{pmatrix}
 2 & 1 & 1 \\
 1 & -1 & -2
-\end{pmatrix} \cdot \begin{pmatrix} -2 \\ 6 \\ -5 \end{pmatrix} ) \\
-= \Phi_{\mathcal{B}} \begin{pmatrix} -3 \\ 2 \end{pmatrix} \\
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+  -2 \\
+  6 \\
+  -5
+  \end{pmatrix}
+  ) \\
+= \Phi_{\mathcal{B}}
+\begin{pmatrix}
+  -3 \\
+  2
+\end{pmatrix} \\
 = -3 \cdot w_1 + 2 \cdot w_2$
 
 ##Korollar (zu Satz 6.6)
 Sei $f: V \to W$ linear, $dimV=n, dimW=m$ und $dim(Imf)=r$. Dann gibt es Basen $\mathcal{A}$ (von $V$) und $\mathcal{B}$ (von $W$), sodass gilt. $\\$
-$$M_{\mathcal{B}}^{\mathcal{A}} (f) = \begin{pmatrix} I_r & 0 \\ 0 & 0 \end{pmatrix} \sim (m,n)$$
+$$M_{\mathcal{B}}^{\mathcal{A}} (f) =
+\begin{pmatrix}
+  I_r & 0 \\
+  0 & 0
+\end{pmatrix}
+\sim (m,n)$$
 
 ##Beweis
 Nach Satz 6.2 gibt es eine Basis $\mathcal{A}=(u_1,...,u_r,v_1,...,v_{n-r})$ von $V$ mit $(v_1,...,v_{n-r})$ ist eine Basis von $Kerf$ und $(w_1=f(u_1),...,w_r=f(u_r))$ ist eine Basis von $Imf.$ Wir ergänzen $(w_1,...,w_r)$ zu einer Basis von $\mathcal{B} = (w_1,...,w_r, w_{r+1},...,w_m)$ von $W$ (mit dem Basisergänzungssatz). Dann gilt: $\\
