@@ -104,4 +104,37 @@ $$\mathbb{L}(A,b) \neq \emptyset \iff \text{Spaltenrang}(A) = \text{Spaltenrang}
 
 ### Beweis
 Definiere: Spaltenrang$(A)$ $=$ Rg$(A)$, Spaltenrang$((A|b))$ $=$ Rg$((A|b))$ \newline
-Mit Rg$(A)$ $=$ $r$
+Mit Rg$(A)$ $=$ $r$ gilt: $r \leq Rg((A|b)) \leq r + 1$. \newline
+$$ \begin{aligned} \mathbb{L}(A,b) \neq \emptyset &\iff \exists v \in K^n \ \text{mit} \ A \cdot v = b \\
+& \iff v_1 \cdot A_{\bullet 1} + \dots + v_n \cdot A_{\bullet n} = b \\
+& \iff b \text{ ist Linearkombination der Spalten von } A \\
+& \iff b \text{ ist Linearkombination der } r \text{ linear unabhängigen Spalten von } A \\
+& \iff Rg((A|b)) = r
+\end{aligned} $$
+
+## Lemma 5.4
+Sei $A \cdot x = b$ ein LGS und die Koeffizientenmatrix $A$ in Zeilenstufenform, Pivots in den ersten $r$ Spalten sitzen, $a_{11} \neq 0, \ldots , a_{rr} \neq 0, r \leq m$ und $r \leq n$:
+
+
+
+
+\begin{tikzpicture}
+   \matrix (m) [ matrix of nodes, row sep = 0.1em, column sep = 0em,
+                 nodes={minimum width = 3em, outer sep = 0em},
+                 left delimiter={(}, right delimiter={)}] {
+            $a_{11}$    &           &           &           & $b_1$       \\
+                        & $a_{22}$  &           &           & $b_2$       \\
+                        &           & $\ddots$  &           & $\vdots$    \\
+                        &           &           & $a_{rr}$  & $b_r$       \\
+                        &           &           &           & $b_{r+1}$   \\
+                        &           &           &           & $\vdots$    \\
+                        &           &           &           & $b_m$       \\
+   };
+    \draw  (m-1-1.south west) -- (m-1-1.south east)
+        -- (m-2-2.south west) -- (m-2-2.south east)
+        -- (m-3-3.south west) -- (m-3-3.south east)
+        -- (m-4-4.south west) -- (m-4-4.south east)
+        -- (m-4-5.south west) -- (m-4-5.south east);
+    \draw  (m-1-5.north west) -- (m-7-5.south west);
+   \node[anchor=south west] at ([shift={(10mm,10mm)}]m.south west) {\Huge 0};
+\end{tikzpicture}
