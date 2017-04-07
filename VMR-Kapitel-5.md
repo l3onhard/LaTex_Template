@@ -138,3 +138,15 @@ Sei $A \cdot x = b$ ein LGS und die Koeffizientenmatrix $A$ in Zeilenstufenform,
     \draw  (m-1-5.north west) -- (m-7-5.south west);
    \node[anchor=south west] at ([shift={(10mm,10mm)}]m.south west) {\Huge 0};
 \end{tikzpicture}
+
+Dann gilt:
+
+(1) Ist $b_i \neq 0$ für ein $i$ mit $r + 1 \leq i \leq m$, so hat das LGS keine Lösung, da $0 \cdot x_1 + \ldots + 0 \cdot x_n = b_i \neq 0$ durch kein n-Tuple $(x_1, \ldots , x_n)$ erfüllbar ist.
+(2) Seien $b_{r+1} = \ldots = b_m = 0$. Dann hat das LGS Lösungen, die man wie folgt erhält: \newline
+Wir setzen $k = n - r$ und wählen für die Unbekannten $x_{r+1}, \ldots, x_n$ Parameter $\lambda_1, \ldots, \lambda_k$, d.h. setze $x_{r+1} = \lambda_1, \ldots, x_n = \lambda_k$.
+Die Parameter dürfen unabhängig voneinander beliebige Werte annehmen.
+Die übrigen Variablen $x_1, \ldots, x_r$ kann man nun eindeutig in Abhängigkeit vo den Parametern berechnen.
+Das geschieht wie folgt: \newline
+$r$-te Gleichung: $a_{rr} \cdot x_r + a_{rr+1} \cdot \lambda_1 + \ldots + a_{rn} \cdot \lambda_k = b_r$ \newline
+$a_{rr} \neq 0 \implies x_r = \frac{1}{a_{rr}} \cdot (b_r - a_{rr_1} \cdot \lambda_1 - \ldots - a_{rn} \cdot \lambda_k)$ \newline
+Man setzt $x_r$ in die $(r-1)$-te Gleichung ein und berechnet
