@@ -96,8 +96,8 @@ Für $\sigma, \tau \in \gamma_n$ gilt:
 
 ##Definition 8.4
 Sei $K^{(n,n)}$ der Vektorraum der $n$-reihigen Matrizen, $n \in \mathbb{N}. \\$
-Die Determinantenfunktion $det: K^{(n,n)} \to K$ ordnet jeder Matrix $A \in K^{(n,n)}$ eine Zahl aus $K$ zu, die die Determinante von $A$ ist und wie folgt bezeichnet wird: $\\
-A =
+Die Determinantenfunktion $det: K^{(n,n)} \to K$ ordnet jeder Matrix $A \in K^{(n,n)}$ eine Zahl aus $K$ zu, die die Determinante von $A$ ist und wie folgt bezeichnet wird: $\\$
+$A =
 \begin{pmatrix}
   a_{11} & ... & a_{1n} \\
   a_{n1} & ... & a_{nn}
@@ -107,6 +107,7 @@ A =
   a_{11} & ... & a_{1n} \\
   a_{n1} & ... & a_{nn}
 \end{vmatrix} \\$
+
 Dabei ist $det(A) \sum\limits_{\sigma \in \gamma_n} sgn(\sigma) \cdot a_{1\sigma(1)} \cdot ... \cdot a_{n\sigma(n)}$
 
 Berechnung der 2- und 3-reihigen Dterminanten:
@@ -196,7 +197,6 @@ Merkregel: Regel von Sarus
      \foreach \c in {1,2,3} {\node[anchor=north] at (sarrus-3-\c.south) {$-$};};
    \end{tikzpicture}
 
-
 ###Beispiele
 (1) $det
 \begin{pmatrix}
@@ -215,20 +215,79 @@ Merkregel: Regel von Sarus
 ###Bemerkung
 Analoge Rechen- und Merkregeln wie in diesen Fällen ($n=2$ und $n=3$) gibt es für $n \geq 4$ nicht!
 
-##Satz 8.5 (Eigenschaften von Determinanten)
-(1) Homogenität in den Zeilen d.h. gemeinsamer Faktor aller Elemente einer Zeile kann vor die Dterminante gezogen werden)
+##Satz 8.5 Es gelten folgende Eigenschaften von Determinanten
+
+(1) Homogenität in den Zeilen
+$\begin{vmatrix}
+  a_{11} & \cdots & a_{1n} \\
+  \vdots & & \vdots \\
+  \lambda \cdot a_{i1} & \cdot & \lambda \cdot a_{in} \\
+  \vdots & & \vdots \\
+  a_{n1} & \cdots & a_{nn}
+\end{vmatrix}
+=
+\lambda \cdot
+\begin{vmatrix}
+  a_{11} & \cdots & a_{1n} \\
+  \vdots & & \vdots \\
+  a_{i1} & \cdot & a_{in} \\
+  \vdots & & \vdots \\
+  a_{n1} & \cdots & a_{nn}
+\end{vmatrix}$
+D.h. ein gemeinsamer Faktor aller Elemente einer Zeile kann vor die Determinante gezogen werden.
+
 (2) Additivität in den Zeilen
-(3) $detI_n=1$
-(4) Addieren des $\lambda-$fachen einer Zeile zu einer anderen Zeile lässt $det$ unverändert
-(5) Zwei Zeilen gleich $\leadsto "det=0"$
-(6) Vertauschen zweier Zeilen ändert Vorzeichen von $det$
-(7) Zwei Zeilen linear abhängig $\leadsto "det=0"$
+$\begin{vmatrix}
+  a_{11} & \cdots & a_{1n} \\
+  \vdots & & \vdots \\
+  a_{i1} + \tilde{a}_{i1} & \cdot & a_{in} + \tilde{a}_{in} \\
+  \vdots & & \vdots \\
+  a_{n1} & \cdots & a_{nn}
+\end{vmatrix}
+=
+\begin{vmatrix}
+  a_{11} & \cdots & a_{1n} \\
+  \vdots & & \vdots \\
+  a_{i1} & \cdot &  a_{in} \\
+  \vdots & & \vdots \\
+  a_{n1} & \cdots & a_{nn}
+\end{vmatrix}
++\begin{vmatrix}
+  a_{11} & \cdots & a_{1n} \\
+  \vdots & & \vdots \\
+  \tilde{a}_{i1} & \cdot & \tilde{a}_{in} \\
+  \vdots & & \vdots \\
+  a_{n1} & \cdots & a_{nn}
+\end{vmatrix}$
+(3)
+$\begin{vmatrix}
+  1 & 0 \\
+  0 & 1 \\
+\end{vmatrix}
+= detI_n=1$
+
+(4)**!** Bei Addieren des $\alpha-$fachen einer Zeile zu einer **anderen** Zeile bleibt der Wert der Determinante **unverändert**.
+
+(5) Sind zwei Zeilen einer Determinante gleich, so hat die Determinante den Wert 0. Zusatz: Ist eine Zeile einer Nullzeile, so hat die Determinante den Wert 0.
+
+(6)**!** Vertauscht man zwei Zeilen einer Determinante miteinander, so **ändert die Determinante ihr Vorzeichen**.
+
+(7) Sind die Zeilen einer Determinante linear abhängig, so hat die Determinante den Wert 0.
+
+Beweis bei moodle.
 
 ##Satz 8.6
-Für jede Matrix $A \in K^{(n,n)}$ gilt $detA=detA^t$
+Für jede Matrix $A \in \mathbb{R}^{(n,n)}$ gilt $detA=detA^t$
 
 ##Beweis
-Homepage!
+$A
+=
+\begin{pmatrix}
+  a_{11} & \cdot & a_{1n} \\
+  \vdots & & \vdots \\
+  a_{n1} & \cdots & a_{nn}
+\end{pmatrix}
+\rightarrow detA = \sum_{\sigma \in \gamma} (sgn \sigma) a_{1\sigma(1)}...a_{n\sigma(1)n}$
 
 ##Folgerung
 Die in Satz 8.5 für die Zeilen einer Determinante angegebenen Eigenschaften gelten entsprechend für die Spalten einer Determinante.
@@ -291,7 +350,7 @@ Rg(A)=n \iff Rg(\tilde{A})=n \\
 \iff \tilde{a}_{ii}=0$ für $i=1,...,n \\
 \overset{(8.7)}{\iff} det \tilde{A} = \tilde{a}_{11} \cdot ... \cdot \tilde{a}_{nn} \neq 0 \\
 \overset{(8.5)}{\iff} detA \neq 0
-\leftarrow det\tilde{A}=(-1)^t \cdot detA (t: $Anzahl Vertauschungen)
+\leftarrow det\tilde{A}=(-1)^t \cdot detA$ (t: Anzahl Vertauschungen)
 
 ##Korollar
 $A \in K^{(n,n)}$. Dann gilt:
@@ -302,32 +361,3 @@ $A \in K^{(n,n)}.$ Dann gilt: $A$ invertierbar $\iff detA \neq 0$
 
 ##Beweis
 $A$ invertierbar $\iff Rg(A)=n \overset{\text{Folg.A}}{\iff} detA \neq 0$
-
-#Definition 8.8
-Sei $A \in K^{(n,n)}.A$ heißt singulär, wenn $detA=0.A$ heißt regulär (bzw. nicht singuär), wenn $detA \neq 0.$
-
-Einige Vorarbeit zum Entwicklungssatz von Laplace:
-
-##Lemma 8.9
-Es gilt:
-$\begin{vmatrix}
-	1 & 0 & \cdots & 0 \\
-	a_{21} & a_{22} & \cdot & a_{2n} \\
-	\vdots & \vdots & & \vdots \\
-	a_{n1} & a_{n2} & \cdots & a_{nn}
-\end{vmatrix}
-=
-1 \cdot
-\begin{vmatrix}
-	a_{22} & \cdot & a_{2n} \\
-	\vdots & & \vdots \\
-	a_{n2} 6 \cdots & a_{nn}
-\end{vmatrix}$
-
-##Beweis
-$\begin{vmatrix}
-	1 & 0 & \cdot & 0 \\
-	a_{21} & a_{22} & \cdots & a_{2n} \\
-	\vdots & \vdots & & \vdots \\
-	a_{n1} & a_{n2} & \cdots & a_{nn}
-\end{vmatrix}$
