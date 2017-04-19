@@ -285,7 +285,7 @@ $A \in K^{(n,n)}$ Matrix. Dann gilt:
 $Rg(A)=n \iff detA \neq 0$
 
 ##Beweis
-$A\overset{\text{elementare}}{\underset{\text{Umformungen}}{\leadsto}} \tilde{A}$ (obere Dreiecksmatrix) $\\$
+$A\overset{elementare}{\underset{Umformungen}{\leadsto}} \tilde{A}$ (obere Dreiecksmatrix) $\\$
 Der Rang ändert sich dabei nicht! $\\
 Rg(A)=n \iff Rg(\tilde{A})=n \\
 \iff \tilde{a}_{ii}=0$ für $i=1,...,n \\
@@ -304,3 +304,30 @@ $A \in K^{(n,n)}.$ Dann gilt: $A$ invertierbar $\iff detA \neq 0$
 $A$ invertierbar $\iff Rg(A)=n \overset{\text{Folg.A}}{\iff} detA \neq 0$
 
 #Definition 8.8
+Sei $A \in K^{(n,n)}.A$ heißt singulär, wenn $detA=0.A$ heißt regulär (bzw. nicht singuär), wenn $detA \neq 0.$
+
+Einige Vorarbeit zum Entwicklungssatz von Laplace:
+
+##Lemma 8.9
+Es gilt:
+$\begin{vmatrix}
+	1 & 0 & \cdots & 0 \\
+	a_{21} & a_{22} & \cdot & a_{2n} \\
+	\vdots & \vdots & & \vdots \\
+	a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{vmatrix}
+=
+1 \cdot
+\begin{vmatrix}
+	a_{22} & \cdot & a_{2n} \\
+	\vdots & & \vdots \\
+	a_{n2} 6 \cdots & a_{nn}
+\end{vmatrix}$
+
+##Beweis
+$\begin{vmatrix}
+	1 & 0 & \cdot & 0 \\
+	a_{21} & a_{22} & \cdots & a_{2n} \\
+	\vdots & \vdots & & \vdots \\
+	a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{vmatrix}$
