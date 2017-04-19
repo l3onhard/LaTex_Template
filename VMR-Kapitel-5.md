@@ -149,4 +149,26 @@ Die übrigen Variablen $x_1, \ldots, x_r$ kann man nun eindeutig in Abhängigkei
 Das geschieht wie folgt: \newline
 $r$-te Gleichung: $a_{rr} \cdot x_r + a_{rr+1} \cdot \lambda_1 + \ldots + a_{rn} \cdot \lambda_k = b_r$ \newline
 $a_{rr} \neq 0 \implies x_r = \frac{1}{a_{rr}} \cdot (b_r - a_{rr_1} \cdot \lambda_1 - \ldots - a_{rn} \cdot \lambda_k)$ \newline
-Man setzt $x_r$ in die $(r-1)$-te Gleichung ein und berechnet
+Man setzt $x_r$ in die $(r-1)$-te Gleichung ein und berechnet man aus der ersten Gleichung $x_1$.
+(3) Ist $r = m$, so kann man keinen Parameter einführen.
+Es gibt dann eine einzige Lösung $(x_1, \ldots, x_n)$, d.h. das LGS ist dann eindeutig lösbar.
+
+### Beispiel
+
+$$
+\begin{aligned}
+(A|b) =
+\begin{pmatrix}
+0 & 2 & 0 & 4 & 6 & 0 & 5 & \BAR & 3 \\
+0 & 0 & 1 & 3 & 2 & 1 & 0 & \BAR & 1 \\
+0 & 0 & 0 & 0 & 0 & 3 & 1 & \BAR & 2 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & \BAR & 0
+\end{pmatrix}
+
+\begin{pmatrix}
+2 & 0 & 0 & 5 & 6 & 4 & 0 & \BAR & 3 \\
+0 & 1 & 1 & 0 & 2 & 3 & 0 & \BAR & 1 \\
+0 & 0 & 3 & 1 & 0 & 0 & 0 & \BAR & 2 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & \BAR & 0
+\end{pmatrix}
+$$
