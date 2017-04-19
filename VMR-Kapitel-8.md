@@ -221,7 +221,7 @@ Analoge Rechen- und Merkregeln wie in diesen Fällen ($n=2$ und $n=3$) gibt es f
 $\begin{vmatrix}
   a_{11} & \cdots & a_{1n} \\
   \vdots & & \vdots \\
-  \lambda \cdot a_{i1} & \cdot & \lambda \cdot a_{in} \\
+  \lambda \cdot a_{i1} & \cdots & \lambda \cdot a_{in} \\
   \vdots & & \vdots \\
   a_{n1} & \cdots & a_{nn}
 \end{vmatrix}
@@ -230,7 +230,7 @@ $\begin{vmatrix}
 \begin{vmatrix}
   a_{11} & \cdots & a_{1n} \\
   \vdots & & \vdots \\
-  a_{i1} & \cdot & a_{in} \\
+  a_{i1} & \cdots & a_{in} \\
   \vdots & & \vdots \\
   a_{n1} & \cdots & a_{nn}
 \end{vmatrix}$
@@ -240,7 +240,7 @@ D.h. ein gemeinsamer Faktor aller Elemente einer Zeile kann vor die Determinante
 $\begin{vmatrix}
   a_{11} & \cdots & a_{1n} \\
   \vdots & & \vdots \\
-  a_{i1} + \tilde{a}_{i1} & \cdot & a_{in} + \tilde{a}_{in} \\
+  a_{i1} + \tilde{a}_{i1} & \cdots & a_{in} + \tilde{a}_{in} \\
   \vdots & & \vdots \\
   a_{n1} & \cdots & a_{nn}
 \end{vmatrix}
@@ -248,21 +248,22 @@ $\begin{vmatrix}
 \begin{vmatrix}
   a_{11} & \cdots & a_{1n} \\
   \vdots & & \vdots \\
-  a_{i1} & \cdot &  a_{in} \\
+  a_{i1} & \cdots &  a_{in} \\
   \vdots & & \vdots \\
   a_{n1} & \cdots & a_{nn}
 \end{vmatrix}
 +\begin{vmatrix}
   a_{11} & \cdots & a_{1n} \\
   \vdots & & \vdots \\
-  \tilde{a}_{i1} & \cdot & \tilde{a}_{in} \\
+  \tilde{a}_{i1} & \cdots & \tilde{a}_{in} \\
   \vdots & & \vdots \\
   a_{n1} & \cdots & a_{nn}
 \end{vmatrix}$
 (3)
 $\begin{vmatrix}
-  1 & 0 \\
-  0 & 1 \\
+  1 & & 0 \\
+    & \ddots & \\
+  0 & & 1
 \end{vmatrix}
 = detI_n=1$
 
@@ -274,7 +275,7 @@ $\begin{vmatrix}
 
 (7) Sind die Zeilen einer Determinante linear abhängig, so hat die Determinante den Wert 0.
 
-Beweis bei moodle.
+Beweis bei moodle. Bitte noch einfügen.
 
 ##Satz 8.6
 Für jede Matrix $A \in \mathbb{R}^{(n,n)}$ gilt $detA=detA^t$
@@ -283,17 +284,29 @@ Für jede Matrix $A \in \mathbb{R}^{(n,n)}$ gilt $detA=detA^t$
 $A
 =
 \begin{pmatrix}
-  a_{11} & \cdot & a_{1n} \\
+  a_{11} & \cdots & a_{1n} \\
   \vdots & & \vdots \\
   a_{n1} & \cdots & a_{nn}
 \end{pmatrix}
-\rightarrow detA = \sum_{\sigma \in \gamma} (sgn \sigma) a_{1\sigma(1)}...a_{n\sigma(1)n}$
+\rightarrow detA = \sum\limits_{\sigma \in \gamma_n} (sgn \sigma) a_{1\sigma(1)}...a_{n\sigma(1)n} (\star) \\
+A^T =
+\begin{pmatrix}
+  a_{11} & \cdots & a_{n1} \\
+  \vdots & & \vdots \\
+  a_{1n} & \cdots & a_{nn}
+\end{pmatrix}
+\rightarrow detA^T = \sum\limits_{\tau \in \gamma_n} (sgn \tau) a_{\tau (1)1}...a_{\tau (n)n} (\star \star) \\$
+Für jeden $\tau \in \gamma_n$ erhalten wir durch Umrechnung der Faktoren $a_{\tau (1)1}...a_{\tau (n)n} = a_{1 \tau^{-1} (1)}...a_{n \tau^{-1} (n)} \\
+(\tau(j)=i \iff j= \tau^{-1} (i), a_{\tau (j)j} = a_{i \tau^{-1} (i)})$
+Wegen $sgn \tau = sgn \tau^{-1}$ folgt damit aus $(\star \star) \\
+(\#) detA^T = \sum\limits_{\tau \in \gamma_n} (sgn \tau^{-1}) a_{1 \tau^{-1} (1)} ... a_{n \tau^{-1} (n)}$
+Da mit $\tau$ auch $\tau^{-1}$ alle Permutationen von $\gamma$ durchläuft, stimmen $(\#)$ und $(\star)$ überein. $\implies detA = detA^T$
 
 ##Folgerung
 Die in Satz 8.5 für die Zeilen einer Determinante angegebenen Eigenschaften gelten entsprechend für die Spalten einer Determinante.
 
 ###Bemerkung
-Wegen der Eigenschaften (4), (6) für die Zeilen und (6) für die Spalten (einer Determinante) stehen für Determinanten genau die elementaren Matrizenumformungen zur Verfügung, die es erlauben, eine Matrix so in Zeilenstufenform zu überführen, dass die Pivtos in den ersten $r$ spalten sitzen, also eine Matrix in obere Dreiecksform zu überführen (vgl. Satz 4.5) und Bemerkung zu Satz 5.5. Daher ist der Wert der Dterminante (bis auf eventuell Vorzeichenänderung) gleich dem Wert der Determinante dieser oberern Dreiecksmatrix. Mit dem folgenden Lemma erhalten wir daher ein einfaches Verfahren zur Berechnung von Determinanten.
+Wegen der Eigenschaften (4) und (6) für die Zeilen und der Eigenschaft (6) für die Spalten einer Determinante stehen für Determinanten genau die elementaren Matrizenumformungen zur Verfügung, die es erlauben, eine Matrix so in Zeilenstufenform zu überführen, dass die Pivtos in den ersten $r$ Spalten sitzen, also eine Matrix in obere Dreiecksform zu überführen. Wegen der Eigenschaften (4) und (6) ist daher der Wert der Determinante bis auf möglicherweise eine Vorzeichenänderung gleich dem Wert dieser oberen Dreiecksmatrix, in welche die ursprüngliche Matrix überführt ist.
 
 ##Lemma 8.7
 $\begin{vmatrix}
@@ -301,14 +314,13 @@ $\begin{vmatrix}
   \vdots & & \vdots \\
   0 & \cdots & a_{nn}
 \end{vmatrix}
-=a_{11} \cdot a_{22} \cdot ... \cdot a_{nn} = \prod\limits_{i=1}^n a_{ij}$
+=a_{11} \cdot a_{22} \cdot ... \cdot a_{nn} = \prod\limits_{i=1}^n a_{ii}$
 
 ##Beweis
-Homepage!
+wiederholte Anwendung von (4), (1) und (3) aus Satz 8.5.
 
-###Bemerkung
-Um die Determinante einer $n$-reihigen quadratischen Matrix $A$ zu berechnen, überführt man $A$ mit elementaren Umformungen vom Typ III für die Zeilen und Typ IV für Zeilen und Spalten in eine oberer Dreiecksmatrix $\tilde{A}$. Nach Satz 8.5 (4) bzw. (6) gilt dann, wenn $t$ die Anzahl aller Vertauschungen von Zeilen und Spalten ist, die benutzt werden. $$detA=(-1)^t \cdot det \tilde{A}$$
-Ist $\tilde{A} =(\tilde{a}_{ij})$ so gilt weiter nach Lemma 8.7: $detA=(-1)^t \cdot \tilde{a}_{11} \cdot ... \cdot \tilde{a}_{nn}$
+##Folgerung 1
+Determinante von$A \leadsto$ überführe $A$ in eine obere Dreiecksmatrix $\tilde{A} \leadsto detA =(-1)^t det \tilde{A}$ und $t$ ist die Anzahl der benötigten Zeilen- und Spaltenvertauschungen, um $A$ in $\tilde{A}$ zu überführen.
 
 ###Beispiel
 $\begin{gmatrix}[v]
@@ -339,25 +351,13 @@ $\begin{gmatrix}[v]
 \end{gmatrix}
 \overset{(8.7)}{=} -1 \cdot 1 \cdot 3 = -3$
 
-##Folgerung 1)
-$A \in K^{(n,n)}$ Matrix. Dann gilt:
+##Folgerung 2
+$A \in \mathbb{R}^{(n,n)}$. Dann gilt:
 $Rg(A)=n \iff detA \neq 0$
 
-##Beweis
-$A\overset{elementare}{\underset{Umformungen}{\leadsto}} \tilde{A}$ (obere Dreiecksmatrix) $\\$
-Der Rang ändert sich dabei nicht! $\\
-Rg(A)=n \iff Rg(\tilde{A})=n \\
-\iff \tilde{a}_{ii}=0$ für $i=1,...,n \\
-\overset{(8.7)}{\iff} det \tilde{A} = \tilde{a}_{11} \cdot ... \cdot \tilde{a}_{nn} \neq 0 \\
-\overset{(8.5)}{\iff} detA \neq 0
-\leftarrow det\tilde{A}=(-1)^t \cdot detA$ (t: Anzahl Vertauschungen)
-
 ##Korollar
-$A \in K^{(n,n)}$. Dann gilt:
-Zeile(Spalten) von $A \iff detA=0$ linear unabhängig
+$A \in \mathbb{R}^{(n,n)}$. Dann gilt:
+Die Zeilen(Spalten) von$A$ sind linar abhängig $\iff detA =0$
 
-##Folgerung 2)
-$A \in K^{(n,n)}.$ Dann gilt: $A$ invertierbar $\iff detA \neq 0$
-
-##Beweis
-$A$ invertierbar $\iff Rg(A)=n \overset{\text{Folg.A}}{\iff} detA \neq 0$
+##Folgerung 3
+$A \in \mathbb{R}^{(n,n)}.$ Dann gilt: $A$ invertierbar $\iff detA \neq 0$
