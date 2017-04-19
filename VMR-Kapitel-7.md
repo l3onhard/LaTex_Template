@@ -1,7 +1,7 @@
 # 7. Koordinatentransformationen
 
 
-## Beispiel
+## BEISPIELE
 
 Seien $\mathcal{A} = (e_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, e_2 = \begin{pmatrix} 0 \\ 1 \end{pmatrix}), ~ \mathcal{B} = (v_1 = \begin{pmatrix} 1 \\ 1 \end{pmatrix}, v_2 = \begin{pmatrix} -1 \\ 1 \end{pmatrix})$ Basen von $\mathbb{R}^2$ und sei $\alpha = \begin{pmatrix} 3 \\ 2 \end{pmatrix} \in \mathbb{R}^2.$ Dann gilt: $\alpha = 3 \cdot e_1 + 2 \cdot e_2$ und $\alpha = \frac{5}{2} \cdot v_1 - \frac{1}{2} \cdot v_2. \\$
 
