@@ -5,6 +5,7 @@
 \usepackage[all]{xy}
 \usepackage{tikz}
 \usetikzlibrary{calc,matrix}
+\usetikzlibrary{decorations.pathreplacing}
 \usepackage{stmaryrd}
 
 % -----------------------

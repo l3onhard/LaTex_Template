@@ -48,18 +48,19 @@ Eine Matrix $B = (b_{ij})$ ~ (m,n) heißt eine $\textbf{Matrix in Zeilenstufenfo
             $\ast$      &           &           &           &             \\
                         & $\ast$    &           &           &             \\
                         &           & $\ast$    &           &             \\
-                        &           &           & \cdots    & $b_r$       \\
-                        &           &           &           & $b_{r+1}$   \\
-                        &           &           &           & $\vdots$    \\
-                        &           &           &           & $b_m$       \\
+                        &           &           & $\cdots$  &             \\
+                        &           &           &           & $\ast$      \\
+                        & \Huge 0   &           &           &             \\
+                        &           &           &           &             \\
    };
-   \draw  (m-1-1.south west) -- (m-1-1.south east)
-        -- (m-2-2.south west) -- (m-2-2.south east)
-        -- (m-3-3.south west) -- (m-3-3.south east)
-        -- (m-4-4.south west) -- (m-4-4.south east)
-        -- (m-4-5.south west) -- (m-4-5.south east);
-    \draw  (m-1-5.north west) -- (m-7-5.south west);
-    \node[anchor=south west] at ([shift={(10mm,10mm)}]m.south west) {\Huge 0};
+    \draw   (m-1-1.south west) -- (m-1-1.south east)
+         -- (m-2-2.south west) -- (m-2-2.south east)
+         -- (m-3-3.south west) -- (m-3-3.south east);
+    \draw   (m-4-4.south east) -- (m-5-5.south west)
+         -- (m-5-5.south east);
+    \draw [decorate,decoration={brace,amplitude=10pt,mirror,raise=4pt},yshift=0pt]
+         (3.5,-1) -- (3.5,1.5) node [black,midway,xshift=1.2cm] {\footnotesize
+         $r$ Zeilen};
 \end{tikzpicture}
 
 Dabei müssen die Einträge an den mit * markierten Stellen ungleich 0 sein und unterhalb der "Stufenlinie" müssen alle Einträge 0 sein. Genauer:
@@ -76,7 +77,23 @@ Für r = 0 ist natürlich B = 0. Die oben durch * markierten Einträge sind gena
 
 ## Beispiel
 
-### Leo ergänzt hier ein Diagramm
+\begin{tikzpicture}
+    \node at (-3,0) {B =};
+    \matrix (m) at (1.5,0) [ matrix of nodes, row sep = 0.1em, column sep = 0em,
+                 nodes={minimum width = 3em, outer sep = 0em},
+                 left delimiter={(}, right delimiter={)}] {
+                0 & 6 & 1 & 0 & 3 & 4 & 0 \\
+                0 & 0 & 7 & 2 & 0 & 1 & 1 \\
+                0 & 0 & 0 & 0 & 0 & 5 & 1 \\
+                0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+   };
+    \draw   (m-1-1.north west) -- (m-1-1.north east)
+         -- (m-2-2.north west) -- (m-2-2.north east)
+         -- (m-3-3.north west) -- (m-3-3.north east)
+         -- (m-3-5.north west) -- (m-3-5.north east)
+         -- (m-4-5.north east) -- (m-4-7.north east);
+    \node at (6.5,0) {$\sim (4,7)$};
+\end{tikzpicture}
 
 $m = 4, n = 7, r = 3, j_1 = 2, j_2 = 3, j_3 = 6, b_{1 j_1} = 6, b_{2 j_2}, b_{3 j_3} = 5$
 
@@ -98,14 +115,14 @@ Folgende Operationen bezeichnet man als **elementare Zeilenumformungen** einer M
 (I) Multiplikation einer i-ten Zeile von A mit einem Skalar $\alpha \in K, \alpha \neq 0.$
 
 $$A = \begin{pmatrix} a_{11} & ... & a_{1n} \\ \vdots & & \vdots \\
-a_{i1} & ... & a_{in} \\ \vdots & & \vdots \\ a_{n1} & ... & a_{nn} \end{pmatrix} 
+a_{i1} & ... & a_{in} \\ \vdots & & \vdots \\ a_{n1} & ... & a_{nn} \end{pmatrix}
 \rightarrow \begin{pmatrix} a_{11} & ... & a_{1n} \\ \vdots & & \vdots \\ \alpha \cdot a_{i1} & ... & \alpha \cdot a_{in} \\ \vdots & & \vdots \\ a_{n1} & ... & a_{nn} \end{pmatrix} = A_I$$
 
 
 (II) Addition der j-ten Zeile von A zur i-ten Zeile von A, wobei $i \neq j.$
 
 $$A = \begin{pmatrix} a_{11} & ... & a_{1n} \\ \vdots & & \vdots \\
-a_{i1} & ... & a_{in} \\ \vdots & ... & \vdots \\ a_{j1} & ... & a_{jn} \\\vdots & & \vdots \\ a_{n1} & ... & a_{nn} \end{pmatrix} 
+a_{i1} & ... & a_{in} \\ \vdots & ... & \vdots \\ a_{j1} & ... & a_{jn} \\\vdots & & \vdots \\ a_{n1} & ... & a_{nn} \end{pmatrix}
 \rightarrow \begin{pmatrix} a_{11} & ... & a_{1n} \\ \vdots & & \vdots \\
 a_{i1}+a_{j1} & ... & a_{in}+a_{jn} \\ \vdots & & \vdots \\ a_{j1} & ... & a_{jn} \\ \vdots & & \vdots \\ a_{n1} & ... & a_{nn} \end{pmatrix} = A_{II}$$
 
@@ -113,7 +130,7 @@ a_{i1}+a_{j1} & ... & a_{in}+a_{jn} \\ \vdots & & \vdots \\ a_{j1} & ... & a_{jn
 (III) Addition der $\alpha$-fachen j-ten Zeile zur i-ten Zeile von A, wobei $i \neq j.$
 
 $$A = \begin{pmatrix} a_{11} & ... & a_{1n} \\ \vdots & & \vdots \\
-a_{i1} & ... & a_{in} \\ \vdots & ... & \vdots \\ a_{j1} & ... & a_{jn} \\\vdots & & \vdots \\ a_{n1} & ... & a_{nn} \end{pmatrix} 
+a_{i1} & ... & a_{in} \\ \vdots & ... & \vdots \\ a_{j1} & ... & a_{jn} \\\vdots & & \vdots \\ a_{n1} & ... & a_{nn} \end{pmatrix}
 \rightarrow \begin{pmatrix} a_{11} & ... & a_{1n} \\ \vdots & & \vdots \\
 a_{i1}+ \alpha \cdot a_{j1} & ... & a_{in}+ \alpha \cdot a_{jn} \\ \vdots & & \vdots \\ a_{j1} & ... & a_{jn} \\ \vdots & & \vdots \\ a_{n1} & ... & a_{nn} \end{pmatrix} = A_{III}$$
 
@@ -121,7 +138,7 @@ a_{i1}+ \alpha \cdot a_{j1} & ... & a_{in}+ \alpha \cdot a_{jn} \\ \vdots & & \v
 (IV) Vertauschen der i-ten Zeile mit der j-ten Zeile, wobei $i \neq j.$
 
 $$A = \begin{pmatrix} a_{11} & ... & a_{1n} \\ \vdots & & \vdots \\
-a_{i1} & ... & a_{in} \\ \vdots & ... & \vdots \\ a_{j1} & ... & a_{jn} \\\vdots & & \vdots \\ a_{n1} & ... & a_{nn} \end{pmatrix} 
+a_{i1} & ... & a_{in} \\ \vdots & ... & \vdots \\ a_{j1} & ... & a_{jn} \\\vdots & & \vdots \\ a_{n1} & ... & a_{nn} \end{pmatrix}
 \rightarrow \begin{pmatrix} a_{11} & ... & a_{1n} \\ \vdots & & \vdots \\
 a_{j1} & ... & a_{jn} \\ \vdots & & \vdots \\ a_{i1} & ... & a_{in} \\ \vdots & & \vdots \\ a_{n1} & ... & a_{nn} \end{pmatrix} = A_{IV}$$
 
