@@ -34,14 +34,17 @@ $A$ heißt die **Koeffizientenmatrix**, die Einträge $a_{ij}$ **Koeffizienten**
 
 Bezeichnet $f: K^n \to K^m$ mit $f(x) = Ax$ die durch $A \sim (m,n)$ definiertes lineare Abbildung, so gilt:
 
-$$ \begin{aligned}
+$$
+\begin{aligned}
 \mathbb{L}(A, b) &= f^{-1}(b)\ \text{(Menge der Urbilder von b unter f)} \\
 \mathbb{L}(A, 0) &= Ker f
-\end{aligned} $$
+\end{aligned}
+$$
 
 ### Beispiel
 
-$$ \begin{aligned}
+$$
+\begin{aligned}
 &\begin{matrix}
 2 x_1 - 3 x_2 + x_3 &= 5 \\
 - x_1 + 2 x_2 + 4 x_3 &= 1 \\
@@ -70,7 +73,8 @@ x_3
 2
 \end{pmatrix} \\
 &\text{Koeffizientenmatrix}
-\end{aligned} $$
+\end{aligned}
+$$
 
 ## Satz 5.2
 
@@ -83,7 +87,10 @@ $$\mathbb{L}(A,b) = v + \mathbb{L}(A,0) \text{ , wobei } v \in \mathbb{L}(A,b) \
 ### Beweis
 
 (1) Sei $f: K^n \to K^m$ die durch A definierte lineare Abbildung mit $f(x) = A \cdot x$. Die Spalten von $A$ sind genau die Bilder $f(e_j)$ der Standardbasisvektoren: $f(e_j) = A \cdot e_j = A_{\cdot j}$. \newline Daher sind die Spaltenvektoren von $A$ ein EZS von $Im(f)$, d.h. es gilt $Im(f) = SR(A)$. Daraus folgt $dim(Im(f)) = r$. \newline Mit der Dimensionsformel (siehe 6.2) folgt:
-$$ dim(K^n) = dim(Ker(f)) + dim(Im(f)) \iff n = dim(Ker(f)) + r $$ \newline Daraus folgt: $dim(Ker(f)) = n - r$. \newline Da $Ker(f) = \mathbb{L}(A,0) \subseteq K^n$ ist UVR mit $dim(\mathbb{L}(A,0)) = n-r$.
+$$
+dim(K^n) = dim(Ker(f)) + dim(Im(f)) \iff n = dim(Ker(f)) + r
+$$ \newline
+Daraus folgt: $dim(Ker(f)) = n - r$. \newline Da $Ker(f) = \mathbb{L}(A,0) \subseteq K^n$ ist UVR mit $dim(\mathbb{L}(A,0)) = n-r$.
 
 (2) Sei $w \in \mathbb{L}(A,0)$ und $v \in \mathbb{L}(A,b)$, d.h. $A \cdot w = 0$ und $A \cdot v = b$. \newline
 $\implies A \cdot (v+w) = A \cdot v + A \cdot w = b + 0 = b \quad\implies v + w \in \mathbb{L}(A,b)$ \newline
@@ -105,18 +112,17 @@ $$\mathbb{L}(A,b) \neq \emptyset \iff \text{Spaltenrang}(A) = \text{Spaltenrang}
 ### Beweis
 Definiere: Spaltenrang$(A)$ $=$ Rg$(A)$, Spaltenrang$((A|b))$ $=$ Rg$((A|b))$ \newline
 Mit Rg$(A)$ $=$ $r$ gilt: $r \leq Rg((A|b)) \leq r + 1$. \newline
-$$ \begin{aligned} \mathbb{L}(A,b) \neq \emptyset &\iff \exists v \in K^n \ \text{mit} \ A \cdot v = b \\
+$$
+\begin{aligned} \mathbb{L}(A,b) \neq \emptyset &\iff \exists v \in K^n \ \text{mit} \ A \cdot v = b \\
 & \iff v_1 \cdot A_{\bullet 1} + \dots + v_n \cdot A_{\bullet n} = b \\
 & \iff b \text{ ist Linearkombination der Spalten von } A \\
 & \iff b \text{ ist Linearkombination der } r \text{ linear unabhängigen Spalten von } A \\
 & \iff Rg((A|b)) = r
-\end{aligned} $$
+\end{aligned}
+$$
 
 ## Lemma 5.4
 Sei $A \cdot x = b$ ein LGS und die Koeffizientenmatrix $A$ in Zeilenstufenform, Pivots in den ersten $r$ Spalten sitzen, $a_{11} \neq 0, \ldots , a_{rr} \neq 0, r \leq m$ und $r \leq n$:
-
-
-
 
 \begin{tikzpicture}
    \matrix (m) [ matrix of nodes, row sep = 0.1em, column sep = 0em,
@@ -164,11 +170,21 @@ $$
 0 & 0 & 0 & 0 & 0 & 3 & 1 & \BAR & 2 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & \BAR & 0
 \end{pmatrix}
-
 \begin{pmatrix}
 2 & 0 & 0 & 5 & 6 & 4 & 0 & \BAR & 3 \\
 0 & 1 & 1 & 0 & 2 & 3 & 0 & \BAR & 1 \\
 0 & 0 & 3 & 1 & 0 & 0 & 0 & \BAR & 2 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & \BAR & 0
 \end{pmatrix}
+\end{aligned}
+$$
+
+$$
+A=
+\begin{blockarray}{c@{\hspace{5pt}}rr@{\hspace{5pt}}cl}
+    0 & 2 & 0 & 4 & 6 & 0 & 5 & \BAR & 3 \\
+    0 & 0 & 1 & 3 & 2 & 1 & 0 & \BAR & 1 \\
+    0 & 0 & 0 & 0 & 0 & 3 & 1 & \BAR & 2 \\
+    0 & 0 & 0 & 0 & 0 & 0 & 0 & \BAR & 0
+\end{blockarray}
 $$
