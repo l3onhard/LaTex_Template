@@ -213,3 +213,31 @@ $$\begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \\ x_6 \\ x_7 \end{pmatrix} = 
 ## Satz 5.5: Gaußsches Eliminationsverfahren
 
 Sei $(A|b)$ die eweiterte Matrix eins LGS $A \cdot x = b.$ Durch elementare Zeilenumformungen sei $(A|b)$ überführt worden in $(\tilde{A}|\tilde{b}),$ wobei $\tilde{A}$ in Zeilenstufenform ist. Dann haben $(A|b)$ und $(\tilde{A}|\tilde{b})$ dieselben Lösungsräume, d.h. $\mathbb{L}(A,b) = \mathbb{L}(\tilde{A},\tilde{b}).$
+
+
+## Lemma 5.6
+
+Für eine Matrix $A \in K^{n \times n}$ sind folgende Eigenschaften äquivalent:
+
+(1) A ist invertierbar
+(2) $A^T$ ist invertierbar
+(3) Spaltenrang(A) = n
+(4) Zeilenrang(A) =n
+
+Insbesondere gilt dann: $(A^T)^{-1} = (A^{-1})^T$
+
+Beweis:
+
+$(1) \Rightarrow (2):$ Sei A invertierbar. Dann gilt:
+$\\ \bullet A^T \cdot (A^{-1})^T = (A^{-1} \cdot A)^T = I_n^T = I_n.$
+$\\ \bullet (A^{-1})^T \cdot A^T = (A \cdot A^{-1})^T = I_n^T = I_n.\\$
+Also ist $A^T$ invertierbar und $(A^T)^{-1} = (A^{-1})^T.$
+
+$(2) \Rightarrow (1):$ Sei $A^T$ invertierbar. Dann gilt wegen $"(1) \Rightarrow (2)"$: $(A^T)^T = A$ ist invertierbar.
+
+$\\ (1) \Leftrightarrow (3): \\$
+A invertierbar $\Leftrightarrow f_A: K^n \rightarrow K^n$ Isomorphismus
+$\Leftrightarrow Ker(f_A) = \{0\}$ und $Im(f_A) = K^n \Leftrightarrow n = dim(Im(f_A)) = Spaltenrang(A) \\$
+
+$(1) \Leftrightarrow (4): \\$
+A invertierbar $\Leftrightarrow A^T$ invertierbar $\Leftrightarrow Spaltenrang(A^T) = n \Leftrightarrow Zeilenrang(A) = n \\$
