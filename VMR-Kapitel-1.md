@@ -6,7 +6,7 @@ Sei $K$ ein Körper (z.B. $K=\mathbb{R}$), $V$ eine nichtleere Menge. Auf $V$ se
 - eine innere Verknüpfung $+:V \times V \to V, (u,v) \mapsto u+v$, die als Addition bezeichnet wird
 - eine äußere Verknüpfung $\cdot: K \times V \to V, (\alpha, v) \mapsto \alpha \cdot v$, die als Multiplikation mit Skalaren bezeichnet wird.
 
-$V$ mit diesen Verknüpfungen heißt K-Vektorraum (KVR), wenn folgende Axiome gelten:
+$V$ mit diesen Verknüpfungen heißt **K-Vektorraum** (KVR), wenn folgende Axiome gelten:
 
 (V1) $V$ ist bzgl. der Addition eine abelsche Gruppe, d.h. es gilt:
 
@@ -22,7 +22,7 @@ $V$ mit diesen Verknüpfungen heißt K-Vektorraum (KVR), wenn folgende Axiome ge
 (c) $\alpha \cdot (\beta \cdot v) = (\alpha \cdot \beta) \cdot v$
 (d) $1 \cdot v = v$
 
-Die Elemente von $V$ heißen Vektoren, die Elemente von $K$ heißen Skalare, $0 \in V$ heißt Nullvektor.
+Die Elemente von $V$ heißen **Vektoren**, die Elemente von $K$ heißen **Skalare**, $0 \in V$ heißt **Nullvektor**.
 Vereinbarung: statt $u+(-v)$ schreibt man $u-v$.
 
 ##Satz 1.2
@@ -48,7 +48,7 @@ $0 = (-0 \cdot u + 0 \cdot u) + 0 \cdot u = 0+0 \cdot u = 0 \cdot u$
   \vdots \\
   x_{n}
 \end{pmatrix}
-| x_{i} \in K$ für $i=1,...,n \}$ der geordneten $n$-Tupel von Skalaren $x_{i} \in K$. Die $x_{i}$ heißen Komponenten des Vektors $x$.
+| x_{i} \in K$ für $i=1,...,n \}$ der geordneten $n$-Tupel von Skalaren $x_{i} \in K$. Die $x_{i}$ heißen **Komponenten** des Vektors $x$.
 
 ###Bemerkung
 Geordnet bedeutet, dass die Reihenfolge der Komponenten wichtig ist:
@@ -106,7 +106,7 @@ Sei $K$ ein Körper (z.B. $K=\mathbb{R}$). Für $m,n \in \mathbb{N}$ seien $m$ Z
   \vdots & & \vdots \\
   a_{m1} & \cdots & a_{mn}
 \end{pmatrix}$
-heißt dann eine Matrix vom Typ $(m,n)$. Die $a_{ij}$ nennt man allgemein die Einträge der Matrix.
+heißt dann eine **Matrix vom Typ $(m,n)$**. Die $a_{ij}$ nennt man allgemein die **Einträge** der Matrix.
 
 Schreibenweisen:
 $A \sim (m,n)$
@@ -140,7 +140,7 @@ Multiplikation mit Skalaren: $f:M \to K, \alpha \in K$
 $\alpha \cdot f: M \to  K, (\alpha \cdot f)(x) = \alpha \cdot f(x).$
 
 ##Definition 1.4
-Sei $V$ ein KVR. Eine Teilmenge $U \subseteq V$ heißt Untervektorraum (UVR) von $V$, wenn sie mit der von $V$ induzierten Addition und Mulitplikation mit Skalaren einen KVR bildet.
+Sei $V$ ein KVR. Eine Teilmenge $U \subseteq V$ heißt **Untervektorraum** (UVR) von $V$, wenn sie mit der von $V$ induzierten Addition und Mulitplikation mit Skalaren einen KVR bildet.
 
 ##Satz 1.5
 Sei $V$ ein KVR und $U \subseteq V. U$ ist genau dann ein UVR von $V$, wenn gilt:
@@ -165,7 +165,7 @@ $"\Longrightarrow"$: Sei $U$ ein UVR von $V$. Dann gilt (UV1), weil z.B. $0 \in 
 (UV3), weil $\cdot: K \times U \to U$ eine äußere Verknüpfung auf $U$ ist.
 
 ##Defintion 1.6
-Seien $V$ und $W$ Vektorräume über demselben Körper $K$. Eine Abbildung $f: V \to W$ heißt lineare Abbildung (genauer $K$-lineare Abbildung), wenn sie mit der Vektorraumstruktur verträglich ist, d.h. wenn gilt:
+Seien $V$ und $W$ Vektorräume über demselben Körper $K$. Eine Abbildung $f: V \to W$ heißt **lineare Abbildung** (genauer $K$-lineare Abbildung), wenn sie mit der Vektorraumstruktur verträglich ist, d.h. wenn gilt:
 
 (L1) $f(u+v)=f(u)+f(v)$ für alle $u,v \in V \\$
 (L2) $f(\alpha \cdot v)=\alpha \cdot f(v)$ für alle $\alpha \in K, v \in V$
@@ -173,11 +173,11 @@ Seien $V$ und $W$ Vektorräume über demselben Körper $K$. Eine Abbildung $f: V
 Kurz: (L) $f(\alpha \cdot u + \beta \cdot f(v)$ für alle $\alpha, \beta \in K$ und $u,v \in V$
 
 ###Ergänzung
-Seien $V$ und $W$ Vektorräume über $K$. Eine $K$-lineare Abbildung $f:V \to W$ heißt auch Homomorphismus. Speziell heißt eine $K$-lineare Abbildung $f:V \to W$ ein
+Seien $V$ und $W$ Vektorräume über $K$. Eine $K$-lineare Abbildung $f:V \to W$ heißt auch **Homomorphismus**. Speziell heißt eine $K$-lineare Abbildung $f:V \to W$ ein
 
-- Isomorphismus, wenn $f$ bijektiv
-- Endomorphismus, wenn $V=W$
-- Automorphismus, wenn $f$ bijektiv und $V=W$
+- **Isomorphismus**, wenn $f$ bijektiv
+- **Endomorphismus**, wenn $V=W$
+- **Automorphismus**, wenn $f$ bijektiv und $V=W$
 
 ##Definition 1.7
 Wei folgt ist eine Multiplikation von Matrizen $A \in K^{(m,n)}$ mit Vektoren aus $K^n$ definiert.
@@ -268,9 +268,9 @@ Seien $V$ und $W$ Vektorräume über $K$. Die menge $Hom(V,W)=\{f:V \to W | f$ i
 ##Definition 1.10
 Sei $f: V \to W$ eine Abbildung.
 
-(a) $f$ heißt surjektiv $\iff \forall w \in W \exists v \in V$ mit $f(u)=w$
-(b) $f$ heißt injektiv $\iff \forall v_1, v_2 \in V$ mit $f(v_1)=f(v_2)$ gilt $v_1 = v_2$
-(c) $f$ heißt bijektiv $\iff f$ ist surjektiv und injektiv
+(a) $f$ heißt **surjektiv** $\iff \forall w \in W \exists v \in V$ mit $f(u)=w$
+(b) $f$ heißt **injektiv** $\iff \forall v_1, v_2 \in V$ mit $f(v_1)=f(v_2)$ gilt $v_1 = v_2$
+(c) $f$ heißt **bijektiv** $\iff f$ ist surjektiv und injektiv
 
 ###Graphische Darstellung
 
@@ -309,8 +309,8 @@ Ist $f: V \to W$ eine lineare Abbildung, so sind $f(V) \subseteq W$ und $f^{-1}(
 ##Definition 1.12
 Sei $f:V \to W$ eine lineare Abbildung. Dann heißt der Untervektorraum
 
-- $Imf:=f(V)$ von $W$ das Bild von $f$
-- $Kerf:=f^{-1}(0)$ von $V$ der Kern von $f$
+- $Imf:=f(V)$ von $W$ das **Bild von $f$**
+- $Kerf:=f^{-1}(0)$ von $V$ der **Kern von $f$**
 
 ###Bemerkung
 Ist $A \in K^{m,n}$, so kann man $A$ nach 1.8 als Abbildung $A: K^n \to K^m$ auffassen und schreibt dann $Im(A)$ und $Ker(A)$.

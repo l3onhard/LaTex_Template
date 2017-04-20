@@ -278,7 +278,7 @@ $\begin{vmatrix}
 Beweis bei moodle. Bitte noch einfügen.
 
 ##Satz 8.6
-Für jede Matrix $A \in \mathbb{R}^{(n,n)}$ gilt $detA=detA^t$
+Für jede Matrix $A \in \mathbb{R}^{(n,n)}$ gilt $detA=detA^T$
 
 ##Beweis
 $A
@@ -349,10 +349,10 @@ $\begin{gmatrix}[v]
   0 & 1 & 1 \\
   0 & 0 & 3
 \end{gmatrix}
-\overset{(8.7)}{=} -1 \cdot 1 \cdot 3 = -3$
+= -(1 \cdot 1 \cdot 3) = -3$
 
 ##Folgerung 2
-$A \in \mathbb{R}^{(n,n)}$. Dann gilt:
+Sei $A \in \mathbb{R}^{(n,n)}$. Dann gilt:
 $Rg(A)=n \iff detA \neq 0$
 
 ##Korollar
