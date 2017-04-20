@@ -18,7 +18,7 @@ Bilde die folgende Matrix $A = \begin{pmatrix} a_{11} & ... & a_{m1} \\
 Der von den Zeilenvektoren $A_{i \bullet} \in K^n$ von A aufgespannte Untervektorraum von $K^n$ heißt der $\textbf{Zeilenraum}$ von A und wird mit ZR(A) bezeichnet: $ZR(A) = span(A_{1 \bullet},...,A_{m \bullet}) \subseteq K^n$. Entsprechend heißt der von den Spaltenvektoren $A_{\bullet j} \in K^m$ aufgespannte Untervektorraum von $K^m$ der $\textbf{Spaltenraum}$ von A und wird mit SR(A) bezeichnet: $SR(A) = span(A_{\bullet 1},...,A_{\bullet n}) \subseteq K^m$.
 Die Dimension von ZR(A) heißt der $\textbf{Zeilenrang}$ von A und die Dimension von SR(A) heißt der $\textbf{Spaltenrang}$ von A.
 
- 
+
 ## Bemerkung
 
 Beachte: A ~ (m,n) $\Rightarrow ZR(A) \subseteq K^n$ und $SR(A) \subseteq K^m$ und in der Regel $n \neq m$.
@@ -32,7 +32,7 @@ $A = \begin{pmatrix} 1 & 0 & 3 \\ 2 & -1 & 1 \end{pmatrix}$
 
 $ZR(A) = span(\begin{pmatrix} 1 \\ 0 \\ 3 \end{pmatrix}, \begin{pmatrix} 2 \\ -1 \\ 1 \end{pmatrix}) \subseteq \mathbb{R}^3 \Rightarrow$ Zeilenrang = 2
 
-$SR(A) = span(\begin{pmatrix} 1 \\ 2 \end{pmatrix}, \begin{pmatrix} 0 \\ -1 \end{pmatrix}, \begin{pmatrix} 3 \\ 1 \end{pmatrix}) \subseteq \mathbb{R}^3 
+$SR(A) = span(\begin{pmatrix} 1 \\ 2 \end{pmatrix}, \begin{pmatrix} 0 \\ -1 \end{pmatrix}, \begin{pmatrix} 3 \\ 1 \end{pmatrix}) \subseteq \mathbb{R}^3
 \Rightarrow$ Spaltenrang = 2
 
 
@@ -40,7 +40,27 @@ $SR(A) = span(\begin{pmatrix} 1 \\ 2 \end{pmatrix}, \begin{pmatrix} 0 \\ -1 \end
 
 Eine Matrix $B = (b_{ij})$ ~ (m,n) heißt eine $\textbf{Matrix in Zeilenstufenform}$, wenn sie folgendes Aussehen hat:
 
-### Leo ergänzt hier noch ein Diagramm
+\begin{tikzpicture}
+    \node at (-3,0) {B =};
+    \matrix (m) at (0.5,0) [ matrix of nodes, row sep = 0.1em, column sep = 0em,
+                 nodes={minimum width = 3em, outer sep = 0em},
+                 left delimiter={(}, right delimiter={)}] {
+            $\ast$      &           &           &           &             \\
+                        & $\ast$    &           &           &             \\
+                        &           & $\ast$    &           &             \\
+                        &           &           & \cdots    & $b_r$       \\
+                        &           &           &           & $b_{r+1}$   \\
+                        &           &           &           & $\vdots$    \\
+                        &           &           &           & $b_m$       \\
+   };
+   \draw  (m-1-1.south west) -- (m-1-1.south east)
+        -- (m-2-2.south west) -- (m-2-2.south east)
+        -- (m-3-3.south west) -- (m-3-3.south east)
+        -- (m-4-4.south west) -- (m-4-4.south east)
+        -- (m-4-5.south west) -- (m-4-5.south east);
+    \draw  (m-1-5.north west) -- (m-7-5.south west);
+    \node[anchor=south west] at ([shift={(10mm,10mm)}]m.south west) {\Huge 0};
+\end{tikzpicture}
 
 Dabei müssen die Einträge an den mit * markierten Stellen ungleich 0 sein und unterhalb der "Stufenlinie" müssen alle Einträge 0 sein. Genauer:
 
