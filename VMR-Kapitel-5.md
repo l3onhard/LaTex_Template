@@ -229,8 +229,8 @@ Insbesondere gilt dann: $(A^T)^{-1} = (A^{-1})^T$
 Beweis:
 
 $(1) \Rightarrow (2):$ Sei A invertierbar. Dann gilt:
-$\\ \bullet A^T \cdot (A^{-1})^T = (A^{-1} \cdot A)^T = I_n^T = I_n.$
-$\\ \bullet (A^{-1})^T \cdot A^T = (A \cdot A^{-1})^T = I_n^T = I_n.\\$
+$\\ \bullet A^T \cdot (A^{-1})^T \stackrel{2.6}{=} (A^{-1} \cdot A)^T = I_n^T = I_n.$
+$\\ \bullet (A^{-1})^T \cdot A^T \stackrel{2.6}{=} (A \cdot A^{-1})^T = I_n^T = I_n.\\$
 Also ist $A^T$ invertierbar und $(A^T)^{-1} = (A^{-1})^T.$
 
 $(2) \Rightarrow (1):$ Sei $A^T$ invertierbar. Dann gilt wegen $"(1) \Rightarrow (2)"$: $(A^T)^T = A$ ist invertierbar.
@@ -240,4 +240,26 @@ A invertierbar $\Leftrightarrow f_A: K^n \rightarrow K^n$ Isomorphismus
 $\Leftrightarrow Ker(f_A) = \{0\}$ und $Im(f_A) = K^n \Leftrightarrow n = dim(Im(f_A)) = Spaltenrang(A) \\$
 
 $(1) \Leftrightarrow (4): \\$
-A invertierbar $\Leftrightarrow A^T$ invertierbar $\Leftrightarrow Spaltenrang(A^T) = n \Leftrightarrow Zeilenrang(A) = n \\$
+A invertierbar $\xLeftrightarrow{(1) \Leftrightarrow (2)} A^T$ invertierbar $\xLeftrightarrow{(1) \Leftrightarrow (3)} Spaltenrang(A^T) = n \Leftrightarrow Zeilenrang(A) = n \\$
+
+
+## Folgerung A
+
+Sei A ~ (n,n) invertierbar. Dann hat jedes LGS $A \cdot x = b$ genau eine Lösung, nämlich $x = A^{-1} \cdot b.$
+
+Beweis:
+
+Sei x eine Lösung von $A \cdot x = b.$ Dann gilt:
+$x = I_n \cdot x = A^{-1} \cdot A \cdot x = A^{-1} \cdot b.$
+Also hat $A \cdot x = b$ höchstens eine Lösung. $A^{-1} \cdot b$ ist eine Lösung, da $A \cdot (A^{-1} \cdot b) = (A \cdot A^{-1}) \cdot b = I_n \cdot b = b.$
+
+
+## Folgerung B
+
+Sei A ~ (n,n) invertierbar. Zu jedem Standardbasisvektor $e_i \in K^n$ sei $x^i = \begin{pmatrix} x_{1i} \\ \vdots \\ x_{ni} \end{pmatrix}$ die nach Folgerung A eindeutige Lösung $A \cdot x = e_i.$ Dann gilt:
+$\\ X = \begin{pmatrix} x^1 & ... & x^n \end{pmatrix} = \begin{pmatrix} x_{11} & ... & x_{1n} \\ \vdots & & \vdots \\ x_{n1} & ... & x_{nn} \end{pmatrix} = A^{-1}$
+
+Beweis:
+
+$A \cdot X = A \cdot \begin{pmatrix} x^1 & ... & x^n \end{pmatrix} = \begin{pmatrix} A \cdot x^1 & ... & A \cdot x^n \end{pmatrix} = \begin{pmatrix} e_1 & ... & e_n \end{pmatrix} = I_n$
+$\\ \Rightarrow X = I_n \cdot X = (A^{-1} \cdot A) \cdot X = A^{-1} \cdot (A \cdot X) = A^{-1} \cdot I_n = A^{-1}$
