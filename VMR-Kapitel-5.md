@@ -188,3 +188,28 @@ A=
     0 & 0 & 0 & 0 & 0 & 0 & 0 & \BAR & 0
 \end{blockarray}
 $$
+
+
+###hier
+
+
+$r=3, b_4 = 0 \Rightarrow \mathbb{L}(A,b) \neq \emptyset \\$
+Parameter für die Unbekannten $x_1,x_4, x_5, x_7$ wählen:
+$\\ x_1 = \lambda_1, x_4 = \lambda_2, x_5 = \lambda_3, x_7 = \lambda_4 \\$
+
+$3.$ Gleichung: $3 \cdot x_6 + \lambda_4 = 2 \Rightarrow x_6 = \frac{2}{3} -\frac{1}{3} \cdot \lambda_4 \\$
+
+$2.$ Gleichung: $x_3 + \frac{2}{3} - \frac{1}{3} \cdot \lambda_4 + 2 \cdot \lambda_3 +3 \cdot \lambda_2 = 1 \Rightarrow x_3 = \frac{1}{3} -3 \cdot \lambda_2 -2 \cdot \lambda_3 + \frac{1}{3} \cdot \lambda_4 \\$
+
+$1.$ Gleichung: $2 \cdot x_2 + 5 \cdot \lambda_4 + 6 \cdot \lambda_3 + 4 \cdot \lambda_2 = 3 \Rightarrow x_2 = 1,5 - 2 \cdot \lambda_2 -3 \cdot \lambda_3 -2,5 \cdot \lambda_4 \\$
+
+
+$$\begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \\ x_6 \\ x_7 \end{pmatrix} = 
+\begin{pmatrix} \lambda_1 \\ 1,5 - 2 \cdot \lambda_2 -3 \cdot \lambda_3 -2,5 \cdot \lambda_4 \\ \frac{1}{3} -3 \cdot \lambda_2 -2 \cdot \lambda_3 + \frac{1}{3} \cdot \lambda_4 \\ \lambda_2 \\ \lambda_3 \\ \frac{2}{3} -\frac{1}{3} \cdot \lambda_4 \\ \lambda_4 \end{pmatrix}$$
+
+$$\begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \\ x_6 \\ x_7 \end{pmatrix} = \underbrace{\begin{pmatrix} 0 \\ 1,5 \\ \frac{1}{3} \\ 0 \\ 0 \\ \frac{2}{3} \\ 0 \end{pmatrix}}_{\text{spezielle Lösung des inhomogenen Systems}} + \underbrace{\lambda_1 \cdot \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \\0 \\0 \\0 \end{pmatrix} + \lambda_2 \cdot \begin{pmatrix} 0 \\ -2 \\ -3 \\ 1 \\ 0 \\ 0 \\ 0 \end{pmatrix} + \lambda_3 \cdot \begin{pmatrix}0 \\ -3 \\ -2 \\ 0 \\ 1 \\ 0 \\ 0 \end{pmatrix} + \lambda_4 \cdot \begin{pmatrix} 0 \\ -2,5 \\ \frac{1}{3} \\ 0 \\ 0 \\ -\frac{1}{3} \\ 1 \end{pmatrix}}_{\text{allgemeine Lösung des homogenen Systems}} \\$$ 
+
+
+## Satz 5.5: Gaußsches Eliminationsverfahren
+
+Sei $(A|b)$ die eweiterte Matrix eins LGS $A \cdot x = b.$ Durch elementare Zeilenumformungen sei $(A|b)$ überführt worden in $(\tilde{A}|\tilde{b}),$ wobei $\tilde{A}$ in Zeilenstufenform ist. Dann haben $(A|b)$ und $(\tilde{A}|\tilde{b})$ dieselben Lösungsräume, d.h. $\mathbb{L}(A,b) = \mathbb{L}(\tilde{A},\tilde{b}).$
