@@ -2,7 +2,7 @@
 numbersections: false
 ---
 
-# [TK: section heading]
+# 4. Elementare Umformungen von Matrizen und Konstruktion eins Untervektorraums $U = span(a_1,...,a_m) \subseteq K^n$
 
 
 Ist $(a_1,...,a_m)$ eine Familie von Vektoren aus $K^n,$ so ist $U=span(a_1,...,a_m)$ der erzeugte Untervektorraum. Aus dem Basisauswahlsatz folgt: Basis = "unverkürzbares" Erzeugendensystem (kann sehr aufwendig sein)
@@ -77,15 +77,33 @@ Folgende Operationen bezeichnet man als **elementare Zeilenumformungen** einer M
 
 (I) Multiplikation einer i-ten Zeile von A mit einem Skalar $\alpha \in K, \alpha \neq 0.$
 
+$$A = \begin{pmatrix} a_{11} & ... & a_{1n} \\ \vdots & & \vdots \\
+a_{i1} & ... & a_{in} \\ \vdots & & \vdots \\ a_{n1} & ... & a_{nn} \end{pmatrix} 
+\rightarrow \begin{pmatrix} a_{11} & ... & a_{1n} \\ \vdots & & \vdots \\ \alpha \cdot a_{i1} & ... & \alpha \cdot a_{in} \\ \vdots & & \vdots \\ a_{n1} & ... & a_{nn} \end{pmatrix} = A_I$$
+
 
 (II) Addition der j-ten Zeile von A zur i-ten Zeile von A, wobei $i \neq j.$
+
+$$A = \begin{pmatrix} a_{11} & ... & a_{1n} \\ \vdots & & \vdots \\
+a_{i1} & ... & a_{in} \\ \vdots & ... & \vdots \\ a_{j1} & ... & a_{jn} \\\vdots & & \vdots \\ a_{n1} & ... & a_{nn} \end{pmatrix} 
+\rightarrow \begin{pmatrix} a_{11} & ... & a_{1n} \\ \vdots & & \vdots \\
+a_{i1}+a_{j1} & ... & a_{in}+a_{jn} \\ \vdots & & \vdots \\ a_{j1} & ... & a_{jn} \\ \vdots & & \vdots \\ a_{n1} & ... & a_{nn} \end{pmatrix} = A_{II}$$
 
 
 (III) Addition der $\alpha$-fachen j-ten Zeile zur i-ten Zeile von A, wobei $i \neq j.$
 
+$$A = \begin{pmatrix} a_{11} & ... & a_{1n} \\ \vdots & & \vdots \\
+a_{i1} & ... & a_{in} \\ \vdots & ... & \vdots \\ a_{j1} & ... & a_{jn} \\\vdots & & \vdots \\ a_{n1} & ... & a_{nn} \end{pmatrix} 
+\rightarrow \begin{pmatrix} a_{11} & ... & a_{1n} \\ \vdots & & \vdots \\
+a_{i1}+ \alpha \cdot a_{j1} & ... & a_{in}+ \alpha \cdot a_{jn} \\ \vdots & & \vdots \\ a_{j1} & ... & a_{jn} \\ \vdots & & \vdots \\ a_{n1} & ... & a_{nn} \end{pmatrix} = A_{III}$$
+
 
 (IV) Vertauschen der i-ten Zeile mit der j-ten Zeile, wobei $i \neq j.$
 
+$$A = \begin{pmatrix} a_{11} & ... & a_{1n} \\ \vdots & & \vdots \\
+a_{i1} & ... & a_{in} \\ \vdots & ... & \vdots \\ a_{j1} & ... & a_{jn} \\\vdots & & \vdots \\ a_{n1} & ... & a_{nn} \end{pmatrix} 
+\rightarrow \begin{pmatrix} a_{11} & ... & a_{1n} \\ \vdots & & \vdots \\
+a_{j1} & ... & a_{jn} \\ \vdots & & \vdots \\ a_{i1} & ... & a_{in} \\ \vdots & & \vdots \\ a_{n1} & ... & a_{nn} \end{pmatrix} = A_{IV}$$
 
 
 
