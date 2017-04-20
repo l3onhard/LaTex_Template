@@ -188,3 +188,10 @@ A=
     0 & 0 & 0 & 0 & 0 & 0 & 0 & \BAR & 0
 \end{blockarray}
 $$
+
+
+###hier
+
+
+$r=3, b_4 = 0 \Rightarrow \mathbb{L}(A,b) \neq \emptyset \\$
+Parameter für die Unbekannten $x_1,x_4, x_5, x_7$ wählen:
