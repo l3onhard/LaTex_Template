@@ -1,7 +1,7 @@
 # 0. Grundlegendes
 
 ## Menge
-Eine Menge ist eine abgegrenzte Gesamtheit von unt\\erscheidbaren Dingen. Diese heißen Elemente der Menge.
+Eine Menge ist eine abgegrenzte Gesamtheit von unterscheidbaren Dingen. Diese heißen Elemente der Menge.
 
 ###Beschreibung von Mengen
 - durch Aufzählen aller Elemente ($M=\{1,3,3,7\}$, $M=\{2,4,6,8,...\}$)
