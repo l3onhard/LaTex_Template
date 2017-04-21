@@ -267,11 +267,11 @@ M_{\mathcal{B}}^{\mathcal{A}} (f) = \begin{pmatrix} I_r & 0 \\ 0 & 0 \end{pmatri
 ##Satz 6.7
 Seien $U,V,W$ KVR mit Basen $\mathcal{A}, \mathcal{B}, \mathcal{C}$ und seien $g: U \to V, f: V \to W$ lineare Abbildungen. Dann gilt $M^{\mathcal{A}}_{\mathcal{C}} (f \circ g) = M^{\mathcal{B}}_{\mathcal{C}} (f) \cdot M^{\mathcal{A}}_{\mathcal{B}} (g)$
 
-##Beweis (Hier fehlen noch die Zahlen und die Klammer im DIagramm)
-\xymatrix{
+##Beweis (Hier fehlen noch die Zahlen)
+$\underbrace{\xymatrix{
 K^r \ar[rrr]^{\Phi_{\mathcal{A}}} \ar[dr]^{M^{\mathcal{A}}_{\mathcal{B}}(g)} \ar[dd]_{M^{\mathcal{A}}_{\mathcal{C}}(g \circ f)} & & &  U \ar[dd]^{g \circ f} \ar[dl]^g \\
   &  K^m \ar[r]^{\Phi_{\mathcal{B}}} \ar[dl]^{M^{\mathcal{B}}_{\mathcal{C}}(f)}  & V \ar[dr]^f & \\
-K^n \ar[rrr]^{\Phi_{\mathcal{C}}} &   &   &   W}
+K^n \ar[rrr]^{\Phi_{\mathcal{C}}} &   &   &   W}}_{\textcircled{3} \text{äußere Dreieck}}$
 
 Zz: Das Diagramm $\textcircled{5}$ ist kommutativ $\\$
 Die Diagramme $\textcircled{1}, \textcircled{2}$ und $\textcircled{3}$ sind kommutativ nach Definition der darstellenden Matrizen. $\\$
@@ -283,4 +283,4 @@ Damit folgt: $\Phi_{\mathcal{C}} \circ M^{\mathcal{B}}_{\mathcal{C}}(f) \circ M^
 Da $\Phi_{\mathcal{C}}$ Isomorphismus folgt: $M^{\mathcal{B}}_{\mathcal{C}}(f) \cdot M^{\mathcal{A}}_{\mathcal{B}}(g) = M^{\mathcal{A}}_{\mathcal{C}}(f \circ g)$
 
 ##Folgerung
-Sei $V$ ein KVR mit der Basis $\mathcal{B}$ und seien $f,g: V \to V$ Endomorphismen. Dann gilt  $\\M^{\mathcal{B}}(f \circ g) = M_{\mathcal{B}}(f) \cdot M_{\mathcal{B}}(g).$
+Sei $V$ ein KVR mit der Basis $\mathcal{B}$ und seien $f,g: V \to V$ Endomorphismen. Dann gilt  $\\M_{\mathcal{B}}(f \circ g) = M_{\mathcal{B}}(f) \cdot M_{\mathcal{B}}(g).$
