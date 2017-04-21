@@ -161,37 +161,38 @@ Es gibt dann eine einzige Lösung $(x_1, \ldots, x_n)$, d.h. das LGS ist dann ei
 
 ### Beispiel
 
-$$
-\begin{aligned}
-(A|b) =
-\begin{pmatrix}
-0 & 2 & 0 & 4 & 6 & 0 & 5 & \BAR & 3 \\
-0 & 0 & 1 & 3 & 2 & 1 & 0 & \BAR & 1 \\
-0 & 0 & 0 & 0 & 0 & 3 & 1 & \BAR & 2 \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & \BAR & 0
-\end{pmatrix}
-\begin{pmatrix}
-2 & 0 & 0 & 5 & 6 & 4 & 0 & \BAR & 3 \\
-0 & 1 & 1 & 0 & 2 & 3 & 0 & \BAR & 1 \\
-0 & 0 & 3 & 1 & 0 & 0 & 0 & \BAR & 2 \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & \BAR & 0
-\end{pmatrix}
-\end{aligned}
-$$
-
-$$
-A=
-\begin{blockarray}{c@{\hspace{5pt}}rr@{\hspace{5pt}}cl}
-    0 & 2 & 0 & 4 & 6 & 0 & 5 & \BAR & 3 \\
-    0 & 0 & 1 & 3 & 2 & 1 & 0 & \BAR & 1 \\
-    0 & 0 & 0 & 0 & 0 & 3 & 1 & \BAR & 2 \\
-    0 & 0 & 0 & 0 & 0 & 0 & 0 & \BAR & 0
-\end{blockarray}
-$$
-
-
-###hier
-
+\begin{tikzpicture}
+    \node at (-3,0) {(A|b) =};
+    \matrix (m) at (1.2,0) [ matrix of nodes, row sep = 0.1em, column sep = 0em,
+                 nodes={minimum width = 2em, outer sep = 0em},
+                 left delimiter={(}, right delimiter={)}] {
+                    0 & 2 & 0 & 4 & 6 & 0 & 5 & 3 \\
+                    0 & 0 & 1 & 3 & 2 & 1 & 0 & 1 \\
+                    0 & 0 & 0 & 0 & 0 & 3 & 1 & 2 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    };
+    \draw   (m-1-7.north east) -- (m-4-7.south east);
+    \matrix (m_i) at (0.9,-1.5) [ matrix of nodes, row sep = 0.1em, column sep = 0em,
+                 nodes={minimum width = 2em, outer sep = 0em} ] {
+                    $x_1$ & $x_2$ & $x_3$ & $x_4$ & $x_5$ & $x_6$ & $x_7$ \\
+                    };
+    \matrix (n) at (1.2,-3.5) [ matrix of nodes, row sep = 0.1em, column sep = 0em,
+                 nodes={minimum width = 2em, outer sep = 0em},
+                 left delimiter={(}, right delimiter={)}] {
+                    2 & 0 & 0 & 5 & 6 & 4 & 0 & 3 \\
+                    0 & 1 & 1 & 0 & 2 & 3 & 0 & 1 \\
+                    0 & 0 & 3 & 1 & 0 & 0 & 0 & 2 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    };
+    \draw   (n-1-7.north east) -- (n-4-7.south east);
+    \matrix (n_i) at (0.9,-5) [ matrix of nodes, row sep = 0.1em, column sep = 0em,
+                 nodes={minimum width = 2em, outer sep = 0em} ] {
+                    $x_2$ & $x_3$ & $x_6$ & $x_7$ & $x_5$ & $x_4$ & $x_1$ \\
+                    };
+    \path [draw=black,postaction={on each segment={mid arrow=black}}]
+            (5,0) to [bend left] (5,-3.5);
+    \node at (7.5,-1.75) {Spalten vertauschen};
+\end{tikzpicture}
 
 $r=3, b_4 = 0 \Rightarrow \mathbb{L}(A,b) \neq \emptyset \\$
 Parameter für die Unbekannten $x_1,x_4, x_5, x_7$ wählen:
@@ -204,10 +205,10 @@ $2.$ Gleichung: $x_3 + \frac{2}{3} - \frac{1}{3} \cdot \lambda_4 + 2 \cdot \lamb
 $1.$ Gleichung: $2 \cdot x_2 + 5 \cdot \lambda_4 + 6 \cdot \lambda_3 + 4 \cdot \lambda_2 = 3 \Rightarrow x_2 = 1,5 - 2 \cdot \lambda_2 -3 \cdot \lambda_3 -2,5 \cdot \lambda_4 \\$
 
 
-$$\begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \\ x_6 \\ x_7 \end{pmatrix} = 
+$$\begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \\ x_6 \\ x_7 \end{pmatrix} =
 \begin{pmatrix} \lambda_1 \\ 1,5 - 2 \cdot \lambda_2 -3 \cdot \lambda_3 -2,5 \cdot \lambda_4 \\ \frac{1}{3} -3 \cdot \lambda_2 -2 \cdot \lambda_3 + \frac{1}{3} \cdot \lambda_4 \\ \lambda_2 \\ \lambda_3 \\ \frac{2}{3} -\frac{1}{3} \cdot \lambda_4 \\ \lambda_4 \end{pmatrix}$$
 
-$$\begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \\ x_6 \\ x_7 \end{pmatrix} = \underbrace{\begin{pmatrix} 0 \\ 1,5 \\ \frac{1}{3} \\ 0 \\ 0 \\ \frac{2}{3} \\ 0 \end{pmatrix}}_{\text{spezielle Lösung des inhomogenen Systems}} + \underbrace{\lambda_1 \cdot \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \\0 \\0 \\0 \end{pmatrix} + \lambda_2 \cdot \begin{pmatrix} 0 \\ -2 \\ -3 \\ 1 \\ 0 \\ 0 \\ 0 \end{pmatrix} + \lambda_3 \cdot \begin{pmatrix}0 \\ -3 \\ -2 \\ 0 \\ 1 \\ 0 \\ 0 \end{pmatrix} + \lambda_4 \cdot \begin{pmatrix} 0 \\ -2,5 \\ \frac{1}{3} \\ 0 \\ 0 \\ -\frac{1}{3} \\ 1 \end{pmatrix}}_{\text{allgemeine Lösung des homogenen Systems}} \\$$ 
+$$\begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \\ x_6 \\ x_7 \end{pmatrix} = \underbrace{\begin{pmatrix} 0 \\ 1,5 \\ \frac{1}{3} \\ 0 \\ 0 \\ \frac{2}{3} \\ 0 \end{pmatrix}}_{\text{spezielle Lösung des inhomogenen Systems}} + \underbrace{\lambda_1 \cdot \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \\0 \\0 \\0 \end{pmatrix} + \lambda_2 \cdot \begin{pmatrix} 0 \\ -2 \\ -3 \\ 1 \\ 0 \\ 0 \\ 0 \end{pmatrix} + \lambda_3 \cdot \begin{pmatrix}0 \\ -3 \\ -2 \\ 0 \\ 1 \\ 0 \\ 0 \end{pmatrix} + \lambda_4 \cdot \begin{pmatrix} 0 \\ -2,5 \\ \frac{1}{3} \\ 0 \\ 0 \\ -\frac{1}{3} \\ 1 \end{pmatrix}}_{\text{allgemeine Lösung des homogenen Systems}} \\$$
 
 
 ## Satz 5.5: Gaußsches Eliminationsverfahren
@@ -263,6 +264,7 @@ Beweis:
 
 $A \cdot X = A \cdot \begin{pmatrix} x^1 & ... & x^n \end{pmatrix} = \begin{pmatrix} A \cdot x^1 & ... & A \cdot x^n \end{pmatrix} = \begin{pmatrix} e_1 & ... & e_n \end{pmatrix} = I_n$
 $\\ \Rightarrow X = I_n \cdot X = (A^{-1} \cdot A) \cdot X = A^{-1} \cdot (A \cdot X) = A^{-1} \cdot I_n = A^{-1}$
+<<<<<<< HEAD
 
 
 ## Verfahren zur Berechnung der Inversen einer invertierbaren Matrix
@@ -331,3 +333,5 @@ $\begin{gmatrix}[p]
 
 
 
+=======
+>>>>>>> origin/master
