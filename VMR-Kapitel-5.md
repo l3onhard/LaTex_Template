@@ -204,10 +204,10 @@ $2.$ Gleichung: $x_3 + \frac{2}{3} - \frac{1}{3} \cdot \lambda_4 + 2 \cdot \lamb
 $1.$ Gleichung: $2 \cdot x_2 + 5 \cdot \lambda_4 + 6 \cdot \lambda_3 + 4 \cdot \lambda_2 = 3 \Rightarrow x_2 = 1,5 - 2 \cdot \lambda_2 -3 \cdot \lambda_3 -2,5 \cdot \lambda_4 \\$
 
 
-$$\begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \\ x_6 \\ x_7 \end{pmatrix} = 
+$$\begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \\ x_6 \\ x_7 \end{pmatrix} =
 \begin{pmatrix} \lambda_1 \\ 1,5 - 2 \cdot \lambda_2 -3 \cdot \lambda_3 -2,5 \cdot \lambda_4 \\ \frac{1}{3} -3 \cdot \lambda_2 -2 \cdot \lambda_3 + \frac{1}{3} \cdot \lambda_4 \\ \lambda_2 \\ \lambda_3 \\ \frac{2}{3} -\frac{1}{3} \cdot \lambda_4 \\ \lambda_4 \end{pmatrix}$$
 
-$$\begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \\ x_6 \\ x_7 \end{pmatrix} = \underbrace{\begin{pmatrix} 0 \\ 1,5 \\ \frac{1}{3} \\ 0 \\ 0 \\ \frac{2}{3} \\ 0 \end{pmatrix}}_{\text{spezielle Lösung des inhomogenen Systems}} + \underbrace{\lambda_1 \cdot \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \\0 \\0 \\0 \end{pmatrix} + \lambda_2 \cdot \begin{pmatrix} 0 \\ -2 \\ -3 \\ 1 \\ 0 \\ 0 \\ 0 \end{pmatrix} + \lambda_3 \cdot \begin{pmatrix}0 \\ -3 \\ -2 \\ 0 \\ 1 \\ 0 \\ 0 \end{pmatrix} + \lambda_4 \cdot \begin{pmatrix} 0 \\ -2,5 \\ \frac{1}{3} \\ 0 \\ 0 \\ -\frac{1}{3} \\ 1 \end{pmatrix}}_{\text{allgemeine Lösung des homogenen Systems}} \\$$ 
+$$\begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \\ x_6 \\ x_7 \end{pmatrix} = \underbrace{\begin{pmatrix} 0 \\ 1,5 \\ \frac{1}{3} \\ 0 \\ 0 \\ \frac{2}{3} \\ 0 \end{pmatrix}}_{\text{spezielle Lösung des inhomogenen Systems}} + \underbrace{\lambda_1 \cdot \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \\0 \\0 \\0 \end{pmatrix} + \lambda_2 \cdot \begin{pmatrix} 0 \\ -2 \\ -3 \\ 1 \\ 0 \\ 0 \\ 0 \end{pmatrix} + \lambda_3 \cdot \begin{pmatrix}0 \\ -3 \\ -2 \\ 0 \\ 1 \\ 0 \\ 0 \end{pmatrix} + \lambda_4 \cdot \begin{pmatrix} 0 \\ -2,5 \\ \frac{1}{3} \\ 0 \\ 0 \\ -\frac{1}{3} \\ 1 \end{pmatrix}}_{\text{allgemeine Lösung des homogenen Systems}} \\$$
 
 
 ## Satz 5.5: Gaußsches Eliminationsverfahren
@@ -273,7 +273,7 @@ Daher: Anwenden des Gaußschen Eliminationsverfahrens gleichzeitig auf alle $A \
 $\\ \begin{pmatrix} A & \BAR & e_1 & ... & e_n \end{pmatrix} = \begin{pmatrix} a_{11} & ... & a_{1n} & \BAR &1 & & 0 \\ \vdots & & \vdots & \BAR & & \ddots & \\ a_{n1} & ... & a_{nn} & \BAR & 0 & & 1 \end{pmatrix} \\$
 
 Elementare Zeilenumformungen liefern:
-$\begin{pmatrix} 
+$\begin{pmatrix}
 1 & & 0 & \BAR & & & \\
 & \ddots & & \BAR & x^1 & ... & x^n \\
 0 & & 1 & \BAR & & & \end{pmatrix}$
@@ -292,7 +292,7 @@ $\begin{gmatrix}[p]
 \to
 \begin{gmatrix}[p]
 1 & 2& 3 & \BAR & 1 & 0 & 0 \\
-0 & 1 & -3 & \BAR & -2 & 1 & 0 \\ 
+0 & 1 & -3 & \BAR & -2 & 1 & 0 \\
 0 & -2 & 5 & \BAR & -1 & 0 & 1 \\
 \rowops
 	\add[\cdot 2]{1}{2}
@@ -320,7 +320,7 @@ $\begin{gmatrix}[p]
 0 & 1 & 0 & \BAR & 13 & -5 & -3 \\
 0 & 0 & -1 & \BAR & -5 & 2 & 1 \\
 \rowops
-	\add[\cdot (-1)]{2}{2}
+    \mult{2}{\cdot (-1)}
 \end{gmatrix} \\[3mm]
 \to
 \begin{gmatrix}[p]
@@ -330,6 +330,3 @@ $\begin{gmatrix}[p]
 \end{gmatrix}$
 
 Also ist $\begin{pmatrix} -40 & 16 & 9 \\ 13 & -5 & -3 \\ 5 & -2 & -1 \end{pmatrix}$ die Inverse zu $\begin{pmatrix} 1 & 2 & 3 \\ 2 & 5 & 3 \\ 1 & 0 & 8 \end{pmatrix}.$
-
-
-
