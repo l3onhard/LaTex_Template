@@ -258,7 +258,7 @@ A &= \begin{gmatrix}[p]
 0 & -1 & 2 & 1 & -1 \\
 0 & 0 & 0 & 1 & 2
 \rowops
-	\add[1]{0}{3}
+	\add[\cdot 1]{0}{3}
 \end{gmatrix} \\[3mm]
 &\to
 \begin{gmatrix}[p]
@@ -276,8 +276,8 @@ A &= \begin{gmatrix}[p]
 0 & 0 & 0 & 2 & -1 \\
 0 & 0 & 0 & 2 & -1
 \rowops
-	\add[-2]{1}{2}
-	\add[-2]{1}{3}
+	\add[\cdot (-2)]{1}{2}
+	\add[\cdot (-2)]{1}{3}
 \end{gmatrix} \\[3mm]
 &\to
 \begin{gmatrix}[p]
@@ -286,7 +286,7 @@ A &= \begin{gmatrix}[p]
 0 & 0 & 0 & 0 & -5 \\
 0 & 0 & 0 & 0 & -5
 \rowops
-	\add[-1]{2}{3}
+	\add[\cdot (-1)]{2}{3}
 \end{gmatrix}
 \to
 \begin{gmatrix}[p]
