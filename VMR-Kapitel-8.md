@@ -364,6 +364,18 @@ $\tau_{ij} =
 \end{pmatrix}$
 , die $i$ nach $j$ und $j$ nach $i$ abbildet und alle anderen Zahlen fest lässt. Dann gilt $sgn(\tau_{ij})=-1$
 
+
+(6) Zum Beweis addieren wir zu der Determinante die Determinante, bei der zwei Zeilen vertauscht sind, und zeigen, dass die Summe 0 ist.
+
+$\\ \begin{vmatrix} a_{11}& ... & a_{1n} \\ \vdots & & \vdots \\ a_{i1}& ... & a_{in} \\ \vdots & & \vdots \\ a_{j1}& ... & a_{jn} \\ \vdots & & \vdots \\ a_{n1}& ... & a_{nn} \end{vmatrix} + \begin{vmatrix} a_{11}& ... & a_{1n} \\ \vdots & & \vdots \\ a_{j1}& ... & a_{jn} \\ \vdots & & \vdots \\ a_{i1}& ... & a_{in} \\ \vdots & & \vdots \\ a_{n1}& ... & a_{nn} \end{vmatrix} 
+\stackrel{(4)}{=} \begin{vmatrix} a_{11}& ... & a_{1n} \\ \vdots & & \vdots \\ a_{i1} + a_{j1} & ... & a_{in} + a_{jn} \\ \vdots & & \vdots \\ a_{j1}& ... & a_{jn} \\ \vdots & & \vdots \\ a_{n1}& ... & a_{nn} \end{vmatrix} + \begin{vmatrix} a_{11}& ... & a_{1n} \\ \vdots & & \vdots \\ a_{j1} + a_{i1} & ... & a_{jn} + a_{in} \\ \vdots & & \vdots \\ a_{i1}& ... & a_{in} \\ \vdots & & \vdots \\ a_{n1}& ... & a_{nn} \end{vmatrix} \\
+\stackrel{(2)}{=} \begin{vmatrix} a_{11}& ... & a_{1n} \\ \vdots & & \vdots \\ a_{i1} + a_{j1} & ... & a_{in} + a_{jn} \\ \vdots & & \vdots \\ a_{i1} + a_{j1}& ... & a_{in} + a_{jn} \\ \vdots & & \vdots \\ a_{n1}& ... & a_{nn} \end{vmatrix} 
+\stackrel{(5)}{=} 0$
+
+
+(7) Durch elementare Zeilenumformungen bringen wir die Matrix auf Zeilenstufenform. Dadurch wird der Wert der Determinanten bis auf einen Faktor $\neq 0$ nicht verändert. Allerdings entsteht aufgrund der linearen Abhängigkeit der Zeilen mindestens eine Nullzeile. Mit dem Zusatz zu (5) folgt damit die Behauptung.
+
+
 ##Satz 8.6
 Für jede Matrix $A \in \mathbb{R}^{(n,n)}$ gilt $detA=detA^T$
 
