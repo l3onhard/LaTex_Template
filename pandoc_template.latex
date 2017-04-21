@@ -7,6 +7,7 @@
 \usetikzlibrary{calc,matrix}
 \usetikzlibrary{decorations.pathreplacing}
 \usetikzlibrary{decorations.markings}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,calc}
 \tikzset{
   % style to apply some styles to each segment of a path
   on each segment/.style={
