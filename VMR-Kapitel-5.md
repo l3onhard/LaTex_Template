@@ -172,11 +172,11 @@ Es gibt dann eine einzige Lösung $(x_1, \ldots, x_n)$, d.h. das LGS ist dann ei
                     0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
                     };
     \draw   (m-1-7.north east) -- (m-4-7.south east);
-    \matrix (mi) at (1.2,2) [ matrix of nodes, row sep = 0.1em, column sep = 0em,
+    \matrix (m_i) at (0.9,-1.5) [ matrix of nodes, row sep = 0.1em, column sep = 0em,
                  nodes={minimum width = 2em, outer sep = 0em} ] {
-                    0 & 2 & 0 & 4 & 6 & 0 & 5 & 3 \\
+                    $x_1$ & $x_2$ & $x_3$ & $x_4$ & $x_5$ & $x_6$ & $x_7$ \\
                     };
-    \matrix (n) at (1.2,-3) [ matrix of nodes, row sep = 0.1em, column sep = 0em,
+    \matrix (n) at (1.2,-3.5) [ matrix of nodes, row sep = 0.1em, column sep = 0em,
                  nodes={minimum width = 2em, outer sep = 0em},
                  left delimiter={(}, right delimiter={)}] {
                     2 & 0 & 0 & 5 & 6 & 4 & 0 & 3 \\
@@ -185,6 +185,13 @@ Es gibt dann eine einzige Lösung $(x_1, \ldots, x_n)$, d.h. das LGS ist dann ei
                     0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
                     };
     \draw   (n-1-7.north east) -- (n-4-7.south east);
+    \matrix (n_i) at (0.9,-5) [ matrix of nodes, row sep = 0.1em, column sep = 0em,
+                 nodes={minimum width = 2em, outer sep = 0em} ] {
+                    $x_2$ & $x_3$ & $x_6$ & $x_7$ & $x_5$ & $x_4$ & $x_1$ \\
+                    };
+    \path [draw=black,postaction={on each segment={mid arrow=black}}]
+            (5,0) to [bend left] (5,-3.5);
+    \node at (7.5,-1.75) {Spalten vertauschen};
 \end{tikzpicture}
 
 $r=3, b_4 = 0 \Rightarrow \mathbb{L}(A,b) \neq \emptyset \\$
