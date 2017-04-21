@@ -263,3 +263,71 @@ Beweis:
 
 $A \cdot X = A \cdot \begin{pmatrix} x^1 & ... & x^n \end{pmatrix} = \begin{pmatrix} A \cdot x^1 & ... & A \cdot x^n \end{pmatrix} = \begin{pmatrix} e_1 & ... & e_n \end{pmatrix} = I_n$
 $\\ \Rightarrow X = I_n \cdot X = (A^{-1} \cdot A) \cdot X = A^{-1} \cdot (A \cdot X) = A^{-1} \cdot I_n = A^{-1}$
+
+
+## Verfahren zur Berechnung der Inversen einer invertierbaren Matrix
+
+Anwenden des Gaußschen Eliminationsverfahrens auf die LGS $A \cdot x = e_i$ für i=1,...,n $\Rightarrow Lösungen x^i \\$
+Folgerung B liefert: $x^i$ Spaltenvektoren von $A^{-1} \\$
+Daher: Anwenden des Gaußschen Eliminationsverfahrens gleichzeitig auf alle $A \cdot x = e_i,$ also auf die folgende erweiterte Matrix:
+$\\ \begin{pmatrix} A & \BAR & e_1 & ... & e_n \end{pmatrix} = \begin{pmatrix} a_{11} & ... & a_{1n} & \BAR &1 & & 0 \\ \vdots & & \vdots & \BAR & & \ddots & \\ a_{n1} & ... & a_{nn} & \BAR & 0 & & 1 \end{pmatrix} \\$
+
+Elementare Zeilenumformungen liefern:
+$\begin{pmatrix} 
+1 & & 0 & \BAR & & & \\
+& \ddots & & \BAR & x^1 & ... & x^n \\
+0 & & 1 & \BAR & & & \end{pmatrix}$
+
+
+## Beispiel
+
+$\begin{gmatrix}[p]
+1 & 2 & 3 & \BAR & 1 & 0 & 0 \\
+2 & 5 & 3 & \BAR & 0 & 1 & 0 \\
+1 & 0 & 8 & \BAR & 0 & 0 & 1 \\
+\rowops
+	\add[\cdot (-2)]{0}{1}
+	\add[\cdot (-1)]{0}{2}
+\end{gmatrix} \\[3mm]
+\to
+\begin{gmatrix}[p]
+1 & 2& 3 & \BAR & 1 & 0 & 0 \\
+0 & 1 & -3 & \BAR & -2 & 1 & 0 \\ 
+0 & -2 & 5 & \BAR & -1 & 0 & 1 \\
+\rowops
+	\add[\cdot 2]{1}{2}
+\end{gmatrix} \\[3mm]
+\to
+\begin{gmatrix}[p]
+1 & 2 & 3 & \BAR & 1 & 0 & 0 \\
+0 & 1 & -3 & \BAR & -2 & 1 & 0 \\
+0 & 0 & -1 & \BAR & -5 & 2 & 1 \\
+\rowops
+	\add[\cdot (-3)]{2}{1}
+	\add[\cdot 3]{2}{0}
+\end{gmatrix} \\[3mm]
+\to
+\begin{gmatrix}[p]
+1 & 2 & 0 & \BAR & -14 & 6 & 3 \\
+0 & 1 & 0 &  \BAR & 13 & -5 & -3 \\
+0 & 0 & -1 & \BAR & -5 & 2 & 1 \\
+\rowops
+	\add[\cdot (-2)]{1}{0}
+\end{gmatrix} \\[3mm]
+\to
+\begin{gmatrix}[p]
+1 & 0 & 0 & \BAR & -40 & 16 & 9 \\
+0 & 1 & 0 & \BAR & 13 & -5 & -3 \\
+0 & 0 & -1 & \BAR & -5 & 2 & 1 \\
+\rowops
+	\add[\cdot (-1)]{2}{2}
+\end{gmatrix} \\[3mm]
+\to
+\begin{gmatrix}[p]
+1 & 0 & 0 & \BAR & -40 & 16 & 9 \\
+0 & 1 & 0 & \BAR & 13 & -5 & -3 \\
+0 & 0 & 1 & \BAR & 5 & -1 & -1 \\
+\end{gmatrix}$
+
+
+
