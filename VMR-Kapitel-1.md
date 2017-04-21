@@ -52,7 +52,7 @@ $0 = (-0 \cdot u + 0 \cdot u) + 0 \cdot u = 0+0 \cdot u = 0 \cdot u$
 
 ###Bemerkung
 Geordnet bedeutet, dass die Reihenfolge der Komponenten wichtig ist:
-$\begin{pmatrix}
+$$\begin{pmatrix}
   x_{1} \\
   \vdots \\
   x_{n}
@@ -63,7 +63,7 @@ $\begin{pmatrix}
   \vdots \\
   y_{n}
 \end{pmatrix}
-\iff x_{1} = y_{1}, ... , x_{n} = y_{n}$
+\iff x_{1} = y_{1}, ... , x_{n} = y_{n}$$
 
 Addition im $K^n:
 \begin{pmatrix}

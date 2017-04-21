@@ -275,7 +275,94 @@ $\begin{vmatrix}
 
 (7) Sind die Zeilen einer Determinante linear abhängig, so hat die Determinante den Wert 0.
 
-Beweis bei moodle. Bitte noch einfügen.
+##Beweis
+(1)
+$\begin{vmatrix}
+  a_{11} & \cdots & a_{1n} \\
+  \vdots & & \vdots \\
+  \lambda \cdot a_{i1} & \cdots & \lambda \cdot a_{in} \\
+  \vdots & & \vdots \\
+  a_{n1} & \cdots & a_{nn}
+\end{vmatrix}
+= \sum\limits_{\sigma \in \gamma_n} (sgn \sigma) a_{1 \sigma (1)} \cdots (\lambda \cdot a_{i \sigma (i)}) \cdots a_{n \sigma (n)} = \lambda \cdot \sum\limits_{\sigma \in \gamma_n} (sgn \sigma) a_{1 \sigma (1)} \cdots a_{i \sigma (1)} \cdots a_{n \sigma (n)} = \lambda \cdot
+\begin{vmatrix}
+  a_{11} & \cdots & a_{1n} \\
+  \vdots & & \vdots \\
+  a_{i1} & \cdots & a_{in} \\
+  \vdots & & \vdots \\
+  a_{n1} & \cdots & a_{nn}
+\end{vmatrix}$
+
+(2) Entsprechend gilt (2) wegen:
+$\sum\limits_{\sigma \in \gamma_n} (sgn \sigma) a_{1 \sigma (1)} \cdots (a_{i \sigma (i)} + \tilde{a}_{i \sigma (i)}) \cdots a_{n \sigma (n)} =
+\sum\limits_{\sigma \in \gamma_n} (sgn \sigma) a_{1 \sigma (1)} \cdots a_{i \sigma (1)} \cdots a_{n \sigma (n)} + \sum\limits_{\sigma \in \gamma_n} (sgn \sigma) a_{1 \sigma (1)} \cdots \tilde{a}_{i \sigma (1)} \cdots a_{n \sigma (n)}$
+
+(3)
+$det I_n =
+\begin{vmatrix}
+  1 & 0 & 0 \\
+  0 & \ddots & 0 \\
+  0 & 0 & 1
+\end{vmatrix}
+= det (\delta_{ij}) = \sum\limits_{\sigma \in \gamma_n} (sgn \sigma) \delta_{1 \sigma (1)} \cdots \sigma_{n \sigma (n)}
+= \underbrace{\sum\limits_{\sigma \in \gamma_n, \sigma \neq \iota} (sgn \sigma) \delta_{1 \sigma (1)} \cdots \delta_{n \sigma (n)}}_{=0, \text{denn:} \sigma \neq \iota \implies \exists k \in {1,...n} \text{mit} \sigma (k) \neq k \implies \delta_{k \sigma (k)} = 0} + \underbrace{(sgn \iota)}_{=1} \underbrace{\delta_{11}}_{=1} \cdots \underbrace{\delta_{nn}}_{=1} = 1$
+
+(4)
+$\begin{vmatrix}
+  a_{11} & \cdots & a_{1n} \\
+  \vdots & & \vdots \\
+  a_{i1} & \cdots & a_{in} \\
+  \vdots & & \vdots \\
+  (a_{j1} + \alpha \cdot a_{i1}) & \cdots & (a_{jn} + \alpha \cdot a_{in}) \\
+  \vdots & & \vdots \\
+  a_{n1} & \cdots & a_{nn}
+\end{vmatrix}
+\underset{nach (1) und (2)}{=}
+\begin{vmatrix}
+  a_{11} & \cdots & a_{1n} \\
+  \vdots & & \vdots \\
+  a_{i1} & \cdots & a_{in} \\
+  \vdots & & \vdots \\
+  a_{j1} & \cdots & a_{jn} \\
+  \vdots & & \vdots \\
+  a_{n1} & \cdots & a_{nn}
+\end{vmatrix} + \alpha \cdot
+\underbrace{\begin{vmatrix}
+  a_{11} & \cdots & a_{1n} \\
+  \vdots & & \vdots \\
+  a_{i1} & \cdots & a_{in} \\
+  \vdots & & \vdots \\
+  a_{i1} & \cdots & a_{in} \\
+  \vdots & & \vdots \\
+  a_{n1} & \cdots & a_{nn}
+\end{vmatrix}}_{=0 \text{nach (5) (Beweis folgt!)}}
+=
+\begin{vmatrix}
+  a_{11} & \cdots & a_{1n} \\
+  \vdots & & \vdots \\
+  a_{n1} & \cdots & a_{nn}
+\end{vmatrix}$
+
+(5)Seien $i,j \in {1,...,n}, i \neq j$ und $A_{i \bullet} = A_{j \bullet},$ also $a_{j1} = a_{j1},...,a_{in} = a_{jn}. \\
+(\star)
+\begin{vmatrix}
+  a_{11} & \cdots & a_{1n} \\
+  \vdots & & \vdots \\
+  a_{i1} & \cdots & a_{in} \\
+  \vdots & & \vdots \\
+  a_{j1}& \cdots & a_{jn}\\
+  \vdots & & \vdots \\
+  a_{n1} & \cdots & a_{nn}
+\end{vmatrix}
+=
+\sum\limits_{\sigma \in \gamma_n} (sgn \sigma) a_{1 \sigma (1)} \cdots a_{i \sigma (i)} \cdots a_{j \sigma (j)} \cdots a_{n \sigma (n)}$
+Für die festen Indizes $i,j$ betrachten wir die Permutationen.
+$\tau_{ij} =
+\begin{pmatrix}
+  1 & \cdots & i & \cdots & j & \cdots & n \\
+  1 & \cdots & j & \cdots & i & \cdots & n
+\end{pmatrix}$
+, die $i$ nach $j$ und $j$ nach $i$ abbildet und alle anderen Zahlen fest lässt. Dann gilt $sgn(\tau_{ij})=-1$
 
 ##Satz 8.6
 Für jede Matrix $A \in \mathbb{R}^{(n,n)}$ gilt $detA=detA^T$
