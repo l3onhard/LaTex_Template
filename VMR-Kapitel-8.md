@@ -363,13 +363,38 @@ $\tau_{ij} =
   1 & \cdots & j & \cdots & i & \cdots & n
 \end{pmatrix}$
 , die $i$ nach $j$ und $j$ nach $i$ abbildet und alle anderen Zahlen fest lässt. Dann gilt $sgn(\tau_{ij})=-1$
-
+Beweis: $\Phi_1 (\tau_{ij})=0,...,\Phi_{i-1}(\tau_{ij})=0 \\
+\Phi_i (\tau_{ij}) =$ Anzahl der Zahlen links vo $I$ und $>i \\
+=$ Anzahl der Zahlen $j,i+1,...,j-1 \\
+=$ Anzahl der Zahlen $i+1,...,i+(j-i) \\
+= j-i \\
+\Phi_{i+1}(\tau_{ij})=1$ (nur $j$ steht links von $i+1$ und ist $>i+1) \\
+\vdots \\
+\Phi_{j-1}(\tau_{ij})=1$ (nur $j$ steht links von $j-1$ und ist $>j-1) \\
+\Phi_j(\tau_{ij})=0$ (keine Zahl links von $j$ ist $>j) \\
+\vdots \\
+\Phi_{n-1}(\tau_{ij})=0$ (keine Zahl links von $n-1$ ist $>n-1)\\$
+Also gilt: $\Phi (\tau_{ij})=\Phi_1 (\tau_{ij})+...+\Phi_{n-1}(\tau_{ij})=j-i+\underbrace{1+...+1}_{(j-1-i)-\text{mal}}=2\cdot (j-1)-1 \\
+\implies sgn(\tau_{ij})=(-1)^{2\cdot (j-1)-1}=-1$
+Für jedes $\sigma \in \gamma_n$ ist auch $\sigma \circ \tau_{ij} \in \gamma_n.$ Dabei gilt:
+$\sigma =
+\begin{pmatrix}
+  1 & \cdots & i & \cdots & j & \cdots & n \\
+  \sigma(1) & \cdots & \sigma(i) & \cdots & \sigma(j) & \cdots & \sigma(n)
+\end{pmatrix} \\
+\implies \sigma \circ \tau_{ij} =
+\begin{pmatrix}
+  1 & \cdots & i & \cdots & j & \cdots & n \\
+  \sigma(1) & \cdots & \sigma(j) & \cdots & \sigma(i) & \cdots & \sigma(n)
+\end{pmatrix} \\$
+In $(\star)$ oben tritt daher neben jedem summanden $(sgn \sigma) a_{1 \sigma (1)} \cdots a_{ i\sigma (i)} \cdots a_{j \sigma (j)}\cdots a_{n \sigma (n)}$ auch ein Summand $(sgn \sigma \circ \tau_{ij}) a_{1 \sigma (1)} \cdots a_{ i\sigma (j)} \cdots  a_{j \sigma (i)} \cdots a_{n \sigma (n)}$ auf. Weil nach Vorraussetzung $a_{i \sigma (i)} = a_{j \sigma (i)}$ und $a_{j \sigma (j)} = a_{i \sigma (j)}$ gilt, haben diese Produkte jeweils dieselben Faktoren und wegen $sgn(\sigma \circ \tau_{ij}) = sgn \sigma \cdot sgn \tau_{ij} = - sgn \sigma$ haben sie entgegengesetztes Vorzeichen, ergeben also in der Summe 0. Damit ist der Wert der Determinante $(\star)$ gleich 0.
+**Zusatz**: Hat die Determinante eine Nullzeile, so addiert man zu ihr eine andere $i$-te Zeile; dabei ändert sich nach (4) der Wert der Determinante nicht. Die neue Determinante hat zwei gleiche Zeilen und hat daher nach (5) den Wert 0 $\implies$ Behauptung.
 
 (6) Zum Beweis addieren wir zu der Determinante die Determinante, bei der zwei Zeilen vertauscht sind, und zeigen, dass die Summe 0 ist.
 
-$\\ \begin{vmatrix} a_{11}& ... & a_{1n} \\ \vdots & & \vdots \\ a_{i1}& ... & a_{in} \\ \vdots & & \vdots \\ a_{j1}& ... & a_{jn} \\ \vdots & & \vdots \\ a_{n1}& ... & a_{nn} \end{vmatrix} + \begin{vmatrix} a_{11}& ... & a_{1n} \\ \vdots & & \vdots \\ a_{j1}& ... & a_{jn} \\ \vdots & & \vdots \\ a_{i1}& ... & a_{in} \\ \vdots & & \vdots \\ a_{n1}& ... & a_{nn} \end{vmatrix} 
+$\\ \begin{vmatrix} a_{11}& ... & a_{1n} \\ \vdots & & \vdots \\ a_{i1}& ... & a_{in} \\ \vdots & & \vdots \\ a_{j1}& ... & a_{jn} \\ \vdots & & \vdots \\ a_{n1}& ... & a_{nn} \end{vmatrix} + \begin{vmatrix} a_{11}& ... & a_{1n} \\ \vdots & & \vdots \\ a_{j1}& ... & a_{jn} \\ \vdots & & \vdots \\ a_{i1}& ... & a_{in} \\ \vdots & & \vdots \\ a_{n1}& ... & a_{nn} \end{vmatrix}
 \stackrel{(4)}{=} \begin{vmatrix} a_{11}& ... & a_{1n} \\ \vdots & & \vdots \\ a_{i1} + a_{j1} & ... & a_{in} + a_{jn} \\ \vdots & & \vdots \\ a_{j1}& ... & a_{jn} \\ \vdots & & \vdots \\ a_{n1}& ... & a_{nn} \end{vmatrix} + \begin{vmatrix} a_{11}& ... & a_{1n} \\ \vdots & & \vdots \\ a_{j1} + a_{i1} & ... & a_{jn} + a_{in} \\ \vdots & & \vdots \\ a_{i1}& ... & a_{in} \\ \vdots & & \vdots \\ a_{n1}& ... & a_{nn} \end{vmatrix} \\
-\stackrel{(2)}{=} \begin{vmatrix} a_{11}& ... & a_{1n} \\ \vdots & & \vdots \\ a_{i1} + a_{j1} & ... & a_{in} + a_{jn} \\ \vdots & & \vdots \\ a_{i1} + a_{j1}& ... & a_{in} + a_{jn} \\ \vdots & & \vdots \\ a_{n1}& ... & a_{nn} \end{vmatrix} 
+\stackrel{(2)}{=} \begin{vmatrix} a_{11}& ... & a_{1n} \\ \vdots & & \vdots \\ a_{i1} + a_{j1} & ... & a_{in} + a_{jn} \\ \vdots & & \vdots \\ a_{i1} + a_{j1}& ... & a_{in} + a_{jn} \\ \vdots & & \vdots \\ a_{n1}& ... & a_{nn} \end{vmatrix}
 \stackrel{(5)}{=} 0$
 
 
