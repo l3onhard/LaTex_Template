@@ -100,17 +100,19 @@ Die Determinantenfunktion $det: K^{(n,n)} \to K$ ordnet jeder Matrix $A \in K^{(
 $A =
 \begin{pmatrix}
   a_{11} & ... & a_{1n} \\
+  \vdots & & \vdots \\
   a_{n1} & ... & a_{nn}
 \end{pmatrix}
 \to det(A) =
 \begin{vmatrix}
   a_{11} & ... & a_{1n} \\
+  \vdots & & \vdots \\
   a_{n1} & ... & a_{nn}
 \end{vmatrix} \\$
 
-Dabei ist $det(A) \sum\limits_{\sigma \in \gamma_n} sgn(\sigma) \cdot a_{1\sigma(1)} \cdot ... \cdot a_{n\sigma(n)}$
+Dabei ist $det(A)= \sum\limits_{\sigma \in \gamma_n} sgn(\sigma) \cdot a_{1\sigma(1)} \cdot ... \cdot a_{n\sigma(n)}$
 
-Berechnung der 2- und 3-reihigen Dterminanten:
+Berechnung der 2- und 3-reihigen Determinanten:
 
 (1) $n=2 \\
 A =
@@ -485,3 +487,33 @@ Die Zeilen(Spalten) von$A$ sind linar abhängig $\iff detA =0$
 
 ##Folgerung 3
 $A \in \mathbb{R}^{(n,n)}.$ Dann gilt: $A$ invertierbar $\iff detA \neq 0$
+
+##Definition 8.8
+Sei $A \in K^{(n,n)}$ eine $n$-reihige quadratische Matrix. Dann heißt $A$ **singulär**, wenn $det(A)=0$, und **nicht-singulär** oder **regulär**, wenn $det(A) \neq 0.$
+
+###Bemerkung
+Sei $A \in K^{(n,n)}$. Dann gilt: $A$ regulär $\diff det(A) \neq 0 \diff Rg(A)=n \diff A$ invertierbar.
+
+##Lemma 8.9
+$\begin{vmatrix}
+  1 & 0 & \cdots & 0 \\
+  a_{21} & \cdots & \cdots & a_{2n} \\
+  \vdots & & & \vdots \\
+  a_{n1} & \cdots & \cdots & a_{nn}
+\end{vmatrix}
+=
+\begin{vmatrix}
+  a_{22} & \cdots & a_{2n} \\
+  \vdots & & \vdots \\
+  a_{n2} & \cdots & a_{nn}
+\end{vmatrix}$
+
+##Beweis
+$\begin{vmatrix}
+  1 & 0 & \cdots & 0 \\
+  a_{21} & a_{22} & \cdots & a_{2n} \\
+  \vdots & \vdots & & \vdots \\
+  a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{vmatrix}
+\overset{8.4}{=}
+\sum\limits_{\sigma \in \gamma_n} sgn (\sigma) \cdot a_{1 \sigma (1)} \cdot ... \cdot a_{n \sigma (n)}$
